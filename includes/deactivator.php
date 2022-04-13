@@ -32,32 +32,9 @@ class Deactivator {
    */
   public static function deactivate() {
 
-    wp_unschedule_hook( 'performance_monitor_repeating_task' );
-    wp_unschedule_hook( 'performance_monitor_task' );
+    //wp_unschedule_hook( 'performance_monitor_repeating_task' );
+    //wp_unschedule_hook( 'performance_monitor_task' );
 
-    Deactivator::depopulateIndexMetadata ();
-    Deactivator::deleteTransients();
-  }
-
-  private static function deleteTransients() {
-    global $wpdb;
-    $transients = $wpdb->get_results(
-      $wpdb->prepare(
-        "SELECT option_name FROM $wpdb->options WHERE option_name LIKE CONCAT(%s, '%%')",
-        $wpdb->esc_like( '_transient_' . PERFORMANCE_MONITOR_PREFIX ) )
-    );
-    foreach ( $transients as $transient ) {
-      $name = str_replace( '_transient_', '', $transient->option_name );
-      delete_transient( $name );
-    }
-  }
-
-  private static function depopulateIndexMetadata () {
-    $depop = new DepopulateMetaIndexes();
-    $depop->init();
-    while (!$depop->doChunk()) {
-      /* empty */
-    }
   }
 
 }

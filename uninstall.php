@@ -26,5 +26,13 @@
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-  exit;
+	exit;
 }
+
+global $wpdb;
+$table1 = $wpdb->prefix . PERFORMANCE_MONITOR_DB_PREFIX;
+$table2 = $wpdb->prefix . PERFORMANCE_MONITOR_DB_PREFIX . 'dp';
+
+$wpdb->query( "DROP TABLE $table1" );
+$wpdb->query( "DROP TABLE $table2" );
+delete_option( PERFORMANCE_MONITOR_PREFIX . 'db-version' );

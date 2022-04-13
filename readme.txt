@@ -1,4 +1,4 @@
-=== Performance Monitor ===
+=== AAA Performance Monitor ===
 Contributors: Ollie Jones
 Tags: users, database, index, performance
 Requires at least: 5.2
@@ -18,6 +18,8 @@ Domain Path: /languages
 Monitor and examine the performance of your WordPress site and database.
 
 == Description ==
+
+TODO  change AAA Performance Monitor to back to Performance Monitor
 
 WordPress sites yadda yadda.
 

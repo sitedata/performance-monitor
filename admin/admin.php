@@ -47,18 +47,19 @@ class Admin
   /** @noinspection PhpUnused */
   public function action__admin_menu() {
 
-    //$indexer = Indexer::getInstance();
-    //$indexer->hackHackHack();
+	  //$indexer = Indexer::getInstance();
+	  //$indexer->hackHackHack();
 
-    add_users_page(
-      esc_html__( 'Performance Monitor', 'performance-monitor' ),
-      esc_html__( 'Performance Monitor', 'performance-monitor' ),
-      'manage_options',
-      $this->plugin_name,
-      [ $this, 'render_admin_page' ],
-      12 );
+	  add_submenu_page(
+		  'tools.php',
+		  esc_html__( 'Performance Monitor', 'performance-monitor' ),
+		  esc_html__( 'Performance Monitor', 'performance-monitor' ),
+		  'manage_options',
+		  $this->plugin_name,
+		  [ $this, 'render_admin_page' ],
+		  15 );
 
-    $this->addTimingSection();
+	  //$this->addTimingSection();
   }
 
   private function addTimingSection() {
@@ -209,9 +210,6 @@ class Admin
 
   /** @noinspection PhpIncludeInspection */
   public function render_admin_page() {
-    /* avoid this overhead unless we actually USE the admin page */
-    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/indexer.php';
-    $this->indexer = Indexer::getInstance();
     include_once $this->pluginPath . 'admin/views/page.php';
   }
 

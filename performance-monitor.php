@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Performance Monitor
+ * AAAA Performance Monitor
  * @author   : Oliver Jones
  * @copyright: 2022 Oliver Jones
  * @license  GPL-2.0-or-later
  * @wordpress-plugin0
- * Plugin Name: Performance Monitor
+ * Plugin Name: AAA Performance Monitor
  * Version: 1.0.0
  * Plugin URI:  https://plumislandmedia.org/performance-monitor/
  * Description: Monitor the performance of your WordPress site and database.
@@ -23,6 +23,8 @@
  * Tags:         users, performance, monitor
  */
 
+// TODO  change AAA Performance Monitor to back to Performance Monitor
+
 use PerformanceMonitor\Activator;
 use PerformanceMonitor\Deactivator;
 
@@ -35,7 +37,7 @@ const PERFORMANCE_MONITOR_NAME = 'performance-monitor';
 define( 'PERFORMANCE_MONITOR_FILENAME', plugin_basename( __FILE__ ) );
 const PERFORMANCE_MONITOR_VERSION        = '1.0.0';
 const PERFORMANCE_MONITOR_PREFIX         = 'performance-monitor-';
-const PERFORMANCE_MONITOR_KEY_PREFIX     = 'perf_mon';
+const PERFORMANCE_MONITOR_DB_PREFIX     = 'perfmon';
 const PERFORMANCE_MONITOR_SHORT_LIFETIME = HOUR_IN_SECONDS * 4;
 const PERFORMANCE_MONITOR_LONG_LIFETIME  = DAY_IN_SECONDS * 2;
 /**
