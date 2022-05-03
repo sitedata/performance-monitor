@@ -1,0 +1,1775 @@
+Source,Type,Name,Versions,Sample,Related,Unit,Meaning
+STATUS,counter,Aborted_clients,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,44067,,connections,The number of connections that were aborted because the client died without closing the connection properly.
+STATUS,counter,Aborted_connects,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6135,,connections,The number of failed attempts to connect to the MySQL server. 
+STATUS,counter,Aborted_connects_preauth,10.4;10.5;10.6,0,,connections,Number of connection attempts that were aborted prior to authentication (regardless of whether or not an error occured).
+STATUS,counter,Access_denied_errors,10.1;10.2;10.3;10.4;10.5;10.6,25062,,connections,Number of access denied errors.
+STATUS,counter,Acl_column_grants,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of column permissions granted (rows in the mysql.columns_priv table).
+STATUS,counter,Acl_database_grants,10.1;10.2;10.3;10.4;10.5;10.6,10106,,ops,Number of database permissions granted (rows in the mysql.db table).
+STATUS,counter,Acl_function_grants,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of function permissions granted (rows in the mysql.procs_priv table with a routine type of FUNCTION).
+STATUS,counter,Acl_package_body_grants,10.3;10.4;10.5;10.6,0,,ops,
+STATUS,counter,Acl_package_spec_grants,10.3;10.4;10.5;10.6,0,,ops,
+STATUS,counter,Acl_procedure_grants,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of procedure permissions granted (rows in the mysql.procs_priv table with a routine type of PROCEDURE).
+STATUS,counter,Acl_role_grants,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops, Number of role permissions granted (rows in the mysql.roles_mapping table).
+STATUS,counter,Acl_table_grants,10.1;10.2;10.3;10.4;10.5;10.6,2,,ops,Number of table permissions granted (rows in the mysql.tables_priv table).
+STATUS,counter,Aria_pagecache_read_requests,10.1;10.2;10.3;10.4;10.5;10.6,662104897,,,
+STATUS,counter,Aria_pagecache_reads,10.1;10.2;10.3;10.4;10.5;10.6,14780595,,,
+STATUS,counter,Aria_pagecache_write_requests,10.1;10.2;10.3;10.4;10.5;10.6,121333786,,,
+STATUS,counter,Aria_pagecache_writes,10.1;10.2;10.3;10.4;10.5;10.6,52059798,,,
+STATUS,counter,Aria_transaction_log_syncs,10.1;10.2;10.3;10.4;10.5;10.6,16145,,ops,
+STATUS,counter,Binlog_bytes_written,10.1;10.2;10.3;10.4;10.5;10.6,0,,bytes,
+STATUS,counter-critical,Binlog_cache_disk_use,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,binlog_cache_size,ops,The number of transactions that used the temporary binary log cache but that exceeded the value of binlog_cache_size and used a temporary file to store statements from the transaction.
+STATUS,counter,Binlog_cache_use,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of transactions that used the binary log cache.
+STATUS,counter,Binlog_commits,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,
+STATUS,counter,Binlog_group_commit_trigger_count,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Binlog_group_commit_trigger_lock_wait,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Binlog_group_commit_trigger_timeout,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Binlog_group_commits,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,
+STATUS,counter,Binlog_stmt_cache_disk_use,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,binlog_stmt_cache_size,statements,The number of nontransactional statements that used the binary log statement cache but that exceeded the value of binlog_stmt_cache_size and used a temporary file to store those statements.
+STATUS,counter,Binlog_stmt_cache_use,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,The number of nontransactional statements that used the binary log statement cache.
+STATUS,counter,Busy_time,10.1;10.2;10.3;10.4;10.5;10.6,0,,seconds, Cumulative time in seconds of activity on connections.
+STATUS,counter,Bytes_received,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,312000000000,,bytes,The number of bytes received from all clients.
+STATUS,counter,Bytes_sent,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9940000000000,,bytes,The number of bytes sent to all clients.
+STATUS,counter,Column_compressions,10.3;10.4;10.5;10.6,0,,columns,
+STATUS,counter,Column_decompressions,10.3;10.4;10.5;10.6,0,,columns,
+STATUS,counter,Com_admin_commands,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,114120,,statements,"Number of admin commands executed. These include table dumps, change users, binary log dumps, shutdowns, pings and debugs."
+STATUS,counter,Com_alter_db,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,175,,statements,Number of ALTER DATABASE commands
+STATUS,counter,Com_alter_db_upgrade,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of ALTER DATABASE ... UPGRADE commands executed.
+STATUS,counter,Com_alter_event,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of ALTER EVENT commands executed
+STATUS,counter,Com_alter_function,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of ALTER FUNCTION commands executed
+STATUS,counter,Com_alter_instance,5.7;8.0,0,,statements,
+STATUS,counter,Com_alter_procedure,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_alter_resource_group,8,0,,statements,
+STATUS,counter,Com_alter_sequence,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_alter_server,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_alter_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,42896,,statements,
+STATUS,counter,Com_alter_tablespace,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_alter_user,5.6;5.7;8.0;10.2;10.3;10.4;10.5;10.6,3818,,statements,
+STATUS,counter,Com_alter_user_default_role,8,0,,statements,
+STATUS,counter,Com_analyze,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_assign_to_keycache,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_backup,10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_backup_lock,10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_begin,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4528096,,statements,
+STATUS,counter,Com_binlog,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_call_procedure,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_change_db,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5529161,,statements,Number of USE database_name commands executed.
+STATUS,counter,Com_change_master,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_change_repl_filter,5.7;8.0,0,,statements,
+STATUS,counter,Com_change_replication_source,8,0,,statements,
+STATUS,counter,Com_check,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,779,,statements,
+STATUS,counter,Com_checksum,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_clone,8,0,,statements,
+STATUS,counter,Com_commit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4527294,Handler_commit,statements,"Number of COMMIT commands executed. Differs from Handler_commit, which counts internal commit statements."
+STATUS,counter,Com_compound_sql,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of compund sql statements
+STATUS,counter,Com_create_compression_dictionary,5.7,0,,statements,
+STATUS,counter,Com_create_db,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,431,,statements,
+STATUS,counter,Com_create_event,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_function,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5,,statements,
+STATUS,counter,Com_create_index,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,216,,statements,
+STATUS,counter,Com_create_package,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_package_body,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_procedure,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_resource_group,8,0,,statements,
+STATUS,counter,Com_create_role,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_sequence,10.3;10.4;10.5;10.6,0,,statements,Number of CREATE SEQUENCE commands executed
+STATUS,counter,Com_create_server,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_spatial_reference_system,8,0,,statements,
+STATUS,counter,Com_create_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,119139,,statements,
+STATUS,counter,Com_create_temporary_table,10.1;10.2;10.3;10.4;10.5;10.6,6379,,statements,
+STATUS,counter,Com_create_trigger,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3,,statements,
+STATUS,counter,Com_create_udf,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_create_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1712,,statements,
+STATUS,counter,Com_create_view,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,551,,statements,
+STATUS,counter,Com_dealloc_sql,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,statements,Number of DROP PREPARE or DEALLOCATE commands executed.
+STATUS,counter,Com_delete,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6244404,Handler_delete,statements,"Number of DELETE commands executed. Differs from Handler_delete, which counts the number of times rows have been deleted from tables."
+STATUS,counter,Com_delete_multi,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,27766,,statements,Number of multi-table DELETE commands executed
+STATUS,counter,Com_do,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_compression_dictionary,5.7,0,,statements,
+STATUS,counter,Com_drop_db,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,276,,statements,
+STATUS,counter,Com_drop_event,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_function,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,statements,
+STATUS,counter,Com_drop_index,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17,,statements,
+STATUS,counter,Com_drop_package,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_package_body,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_procedure,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_resource_group,8,0,,statements,
+STATUS,counter,Com_drop_role,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_sequence,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_server,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_drop_spatial_reference_system,8,0,,statements,
+STATUS,counter,Com_drop_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,7636,,statements,
+STATUS,counter,Com_drop_temporary_table,10.1;10.2;10.3;10.4;10.5;10.6,202,,statements,
+STATUS,counter,Com_drop_trigger,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2,,statements,
+STATUS,counter,Com_drop_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,751,,statements,
+STATUS,counter,Com_drop_view,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,statements,
+STATUS,counter,Com_empty_query,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5044,,statements,Number of queries to the server that do not produce SQL queries. 
+STATUS,counter,Com_enable_governor,5.7;10.1;10.2;10.3;10.4,0,,statements,
+STATUS,counter,Com_enable_governor_lve,5.7;10.1;10.2;10.3;10.4,11085,,statements,
+STATUS,counter,Com_enable_governor_reconn,5.7;10.1;10.2;10.3;10.4,0,,statements,
+STATUS,counter,Com_enable_governor_reconn_lve,5.7;10.1;10.2;10.3;10.4,0,,statements,
+STATUS,counter,Com_execute_immediate,10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_execute_sql,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,statements,
+STATUS,counter,Com_explain_other,5.7;8.0,0,,statements,Indicates the number of EXPLAIN FOR CONNECTION statements executed. 
+STATUS,counter,Com_flush,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,statements,
+STATUS,counter,Com_get_diagnostics,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_grant,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,11271,,statements,
+STATUS,counter,Com_grant_role,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_grant_roles,8,0,,statements,
+STATUS,counter,Com_group_replication_start,5.7;8.0,0,,statements,
+STATUS,counter,Com_group_replication_stop,5.7;8.0,0,,statements,
+STATUS,counter,Com_ha_close,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of HANDLER table_name CLOSE commands executed
+STATUS,counter,Com_ha_open,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of HANDLER table_name OPEN commands executed.
+STATUS,counter,Com_ha_read,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,Number of HANDLER table_name READ commands executed
+STATUS,counter,Com_help,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_import,8,0,,statements,
+STATUS,counter,Com_insert,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12461820,,statements,
+STATUS,counter,Com_insert_select,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,28633,,statements,Number of INSERT commands executed.
+STATUS,counter,Com_install_component,8,0,,statements,Number of INSERT SELECT commands executed.
+STATUS,counter,Com_install_plugin,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_kill,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,42,,statements,
+STATUS,counter,Com_load,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_lock_binlog_for_backup,5.7,0,,statements,
+STATUS,counter,Com_lock_instance,8,0,,statements,
+STATUS,counter,Com_lock_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,13003,,statements,
+STATUS,counter,Com_lock_tables_for_backup,5.7,0,,statements,
+STATUS,counter,Com_multi,10.2;10.3;10.4;10.5,0,,statements,
+STATUS,counter,Com_optimize,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1372,,statements,
+STATUS,counter,Com_preload_keys,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_prepare_sql,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,statements,
+STATUS,counter,Com_purge,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_purge_before_date,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_release_savepoint,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12859,,statements,
+STATUS,counter,Com_rename_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,144,,statements,
+STATUS,counter,Com_rename_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,18,,statements,
+STATUS,counter,Com_repair,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,182,,statements,
+STATUS,counter,Com_replace,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,572502,,statements,
+STATUS,counter,Com_replace_select,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,statements,
+STATUS,counter,Com_replica_start,8,0,,statements,
+STATUS,counter,Com_replica_stop,8,0,,statements,
+STATUS,counter,Com_reset,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_resignal,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_restart,8,0,,statements,
+STATUS,counter,Com_revoke,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,113,,statements,
+STATUS,counter,Com_revoke_all,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_revoke_role,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_revoke_roles,8,0,,statements,
+STATUS,counter,Com_rollback,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,282,,statements,
+STATUS,counter,Com_rollback_to_savepoint,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,52863,,statements,
+STATUS,counter,Com_savepoint,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12864,,statements,
+STATUS,counter,Com_select,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2215261797,,statements,
+STATUS,counter,Com_set_option,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32394182,,statements,
+STATUS,counter,Com_set_password,8,0,,statements,
+STATUS,counter,Com_set_resource_group,8,0,,statements,
+STATUS,counter,Com_set_role,8,0,,statements,
+STATUS,counter,Com_show_authors,5.5;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_binlog_events,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_binlog_status,10.5;10.6,0,,statements,
+STATUS,counter,Com_show_binlogs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,267,,statements,
+STATUS,counter,Com_show_charsets,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,44,,statements,
+STATUS,counter,Com_show_client_statistics,5.7,0,,statements,
+STATUS,counter,Com_show_collations,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17,,statements,
+STATUS,counter,Com_show_contributors,5.5;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_create_db,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,806,,statements,
+STATUS,counter,Com_show_create_event,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_create_func,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2,,statements,
+STATUS,counter,Com_show_create_package,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_create_package_body,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_create_proc,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_create_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,69907,,statements,
+STATUS,counter,Com_show_create_trigger,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,34,,statements,
+STATUS,counter,Com_show_create_user,5.7;8.0;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_databases,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,422,,statements,
+STATUS,counter,Com_show_engine_logs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_engine_mutex,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_engine_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_errors,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_events,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,827,,statements,
+STATUS,counter,Com_show_explain,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_fields,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5840063,,statements,
+STATUS,counter,Com_show_function_code,5.6;5.7;8.0,0,,statements,
+STATUS,counter,Com_show_function_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,943,,statements,
+STATUS,counter,Com_show_generic,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_grants,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,25028,,statements,
+STATUS,counter,Com_show_index_statistics,5.7,0,,statements,
+STATUS,counter,Com_show_keys,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,38600,,statements,
+STATUS,counter,Com_show_master_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4,812,,statements,
+STATUS,counter,Com_show_open_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_package_body_status,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_package_status,10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_plugins,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_privileges,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_procedure_code,5.6;5.7;8.0,0,,statements,
+STATUS,counter,Com_show_procedure_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,946,,statements,
+STATUS,counter,Com_show_processlist,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,177615,,statements,
+STATUS,counter,Com_show_profile,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_profiles,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_relaylog_events,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_replica_status,8,0,,statements,
+STATUS,counter,Com_show_replicas,8,0,,statements,
+STATUS,counter,Com_show_slave_hosts,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_show_slave_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,812,,statements,
+STATUS,counter,Com_show_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,387,,statements,
+STATUS,counter,Com_show_storage_engines,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2799,,statements,
+STATUS,counter,Com_show_table_statistics,5.7,0,,statements,
+STATUS,counter,Com_show_table_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10954,,statements,
+STATUS,counter,Com_show_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2929355,,statements,
+STATUS,counter,Com_show_thread_statistics,5.7,0,,statements,
+STATUS,counter,Com_show_triggers,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,166,,statements,
+STATUS,counter,Com_show_user_statistics,5.7,0,,statements,
+STATUS,counter,Com_show_variables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,70478,,statements,
+STATUS,counter,Com_show_warnings,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4387,,statements,
+STATUS,counter,Com_shutdown,5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_signal,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_slave_start,5.5;5.6;5.7;8.0,0,,statements,
+STATUS,counter,Com_slave_stop,5.5;5.6;5.7;8.0,0,,statements,
+STATUS,counter,Com_start_all_slaves,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_start_slave,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_stmt_close,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17181765,,statements,Prepared statement deallocation
+STATUS,counter,Com_stmt_execute,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17182142,,statements,Prepared statement execution
+STATUS,counter,Com_stmt_fetch,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_stmt_prepare,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17182348,,statements,Prepared statement creation
+STATUS,counter,Com_stmt_reprepare,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,statements,"Number of times statements were automatically reprepared by the server, for example, after metadata changes to tables or views referred to by the statement. A reprepare operation increments Com_stmt_reprepare, and also Com_stmt_prepare."
+STATUS,counter,Com_stmt_reset,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_stmt_send_long_data,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,22435,,statements,
+STATUS,counter,Com_stop_all_slaves,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_stop_slave,10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_truncate,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5750,,statements,
+STATUS,counter,Com_uninstall_component,8,0,,statements,
+STATUS,counter,Com_uninstall_plugin,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_unlock_binlog,5.7,0,,statements,
+STATUS,counter,Com_unlock_instance,8,0,,statements,
+STATUS,counter,Com_unlock_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,13885,,statements,
+STATUS,counter,Com_update,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,31481948,,statements,
+STATUS,counter,Com_update_multi,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5806,,statements,
+STATUS,counter,Com_xa_commit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_xa_end,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_xa_prepare,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_xa_recover,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_xa_rollback,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Com_xa_start,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,statements,
+STATUS,counter,Connection_errors_accept,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of errors that occurred during calls to accept() on the listening port.
+STATUS,counter,Connection_errors_internal,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,"The number of connections refused due to internal errors in the server, such as failure to start a new thread or an out-of-memory condition."
+STATUS,counter,Connection_errors_max_connections,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,max_connections,connections,The number of connections refused because the server max_connections limit was reached.
+STATUS,counter,Connection_errors_peer_address,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of errors that occurred while searching for connecting client IP addresses.
+STATUS,counter,Connection_errors_select,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of errors that occurred during calls to OS select() or poll() on the listening port. (Failure of this operation does not necessarily means a client connection was rejected.)
+STATUS,counter,Connection_errors_tcpwrap,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of connections refused by the libwrap library.
+STATUS,counter,Connections,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16954086,,connections,The number of connection attempts (successful or not) to the MySQL server.
+STATUS,counter,Cpu_time,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Created_tmp_disk_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,17516120,Created_tmp_tables,ops,The number of internal on-disk temporary tables created by the server while executing statements.
+STATUS,counter,Created_tmp_files,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,26058,,ops,How many temporary files mysqld has created.
+STATUS,counter,Created_tmp_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,29919378,Created_tmp_disk_tables,ops,The number of internal temporary tables created by the server while executing statements.
+STATUS,counter,Delayed_errors,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Deprecated.  This status variable is deprecated (because DELAYED inserts are not supported)
+STATUS,counter,Delayed_insert_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Deprecated.  This status variable is deprecated (because DELAYED inserts are not supported)
+STATUS,counter,Delayed_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Deprecated.  This status variable is deprecated (because DELAYED inserts are not supported)
+STATUS,counter,Delete_scan,10.1;10.2;10.3;10.4;10.5;10.6,1285265,,statements,Number of DELETEs that required a full table scan
+STATUS,counter,Empty_queries,10.1;10.2;10.3;10.4;10.5;10.6,1351616078,,statements, Number of queries returning no results. Note this is not the same as Com_empty_query
+STATUS,counter,Error_log_expired_events,8,0,,ops,The number of events discarded from the Performance Schema error_log table to make room for new events.
+STATUS,counter,Executed_events,10.1;10.2;10.3;10.4;10.5;10.6,0,,,Number of times events created with CREATE EVENT have executed.
+STATUS,counter,Executed_triggers,10.1;10.2;10.3;10.4;10.5;10.6,1,,, Number of times triggers created with CREATE TRIGGER have executed
+STATUS,counter,Feature_application_time_periods,10.4;10.5;10.6,0,,ops,Number of times a table created with periods has been opened
+STATUS,counter,Feature_check_constraint,10.2;10.3;10.4;10.5;10.6,1608,,ops,Number of times constraints were checked. The global value can be flushed by FLUSH STATUS
+STATUS,counter,Feature_custom_aggregate_functions,10.3;10.4;10.5;10.6,0,,statements,Number of queries which make use of custom aggregate functions
+STATUS,counter,Feature_delay_key_write,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Feature_dynamic_columns,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of times the COLUMN_CREATE() function was used
+STATUS,counter,Feature_fulltext,10.1;10.2;10.3;10.4;10.5;10.6,100194,,statements,Number of times the MATCH … AGAINST() function was used
+STATUS,counter,Feature_gis,10.1;10.2;10.3;10.4;10.5;10.6,3093,,ops,Number of times a table with a any of the geometry columns was opened
+STATUS,counter,Feature_insert_returning,10.5;10.6,0,,,
+STATUS,counter,Feature_invisible_columns,10.3;10.4;10.5;10.6,0,,columns,Number of invisible columns in all opened tables.
+STATUS,counter,Feature_json,10.3;10.4;10.5;10.6,0,,ops,"Number of times JSON functionality has been used, such as one of the JSON functions. Does not include the CONNECT engine JSON type, or EXPLAIN/ANALYZE FORMAT=JSON"
+STATUS,counter,Feature_locale,10.1;10.2;10.3;10.4;10.5;10.6,13140,,lc_messages,Number of times the @@lc_messages variable was assigned into.
+STATUS,counter,Feature_subquery,10.1;10.2;10.3;10.4;10.5;10.6,84032241,,ops,Number of subqueries (excluding subqueries in the FROM clause) used
+STATUS,counter,Feature_system_versioning,10.3;10.4;10.5;10.6,0,,tables,Number of times a table WITH SYSTEM VERSIONING has been opened.
+STATUS,counter,Feature_timezone,10.1;10.2;10.3;10.4;10.5;10.6,468599,,ops,Number of times an explicit timezone (excluding UTC and SYSTEM) was specified
+STATUS,counter,Feature_trigger,10.1;10.2;10.3;10.4;10.5;10.6,1410,,ops,Number of triggers loaded
+STATUS,counter,Feature_window_functions,10.2;10.3;10.4;10.5;10.6,200,,ops,Number of times window functions were used.
+STATUS,counter,Feature_xml,10.1;10.2;10.3;10.4;10.5;10.6,99,,ops,Number of times XML functions (EXTRACTVALUE() and UPDATEXML()) were used
+STATUS,counter,Flush_commands,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4,1,,ops,"The number of times the server flushes tables, whether because a user executed a FLUSH TABLES statement or due to internal server operation. It is also incremented by receipt of a COM_REFRESH packet. This is in contrast to Com_flush, which indicates how many FLUSH statements have been executed, whether FLUSH TABLES, FLUSH LOGS, and so forth."
+STATUS,counter,Handler_commit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,195815212,,ops,The number of internal COMMIT statements.
+STATUS,counter,Handler_delete,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,7086348,,ops,The number of times that rows have been deleted from tables.
+STATUS,counter,Handler_discover,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3266,,ops,Discovery is when the server asks the NDBCLUSTER storage engine if it knows about a table with a given name. Handler_discover indicates the number of times that tables have been discovered in this way
+STATUS,counter,Handler_external_lock,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,"The server increments this variable for each call to its external_lock() function, which generally occurs at the beginning and end of access to a table instance. There might be differences among storage engines. This variable can be used, for example, to discover for a statement that accesses a partitioned table how many partitions were pruned before locking occurred: Check how much the counter increased for the statement, subtract 2 (2 calls for the table itself), then divide by 2 to get the number of partitions locked."
+STATUS,counter,Handler_icp_attempts,10.1;10.2;10.3;10.4;10.5;10.6,2905391557,Handler_icp_match,ops,"Number of times pushed index condition was checked. (""Using index condition"" in EXPLAIN). The smaller the ratio of Handler_icp_attempts to Handler_icp_match the better the filtering. See Index Condition Pushdown"
+STATUS,counter,Handler_icp_match,10.1;10.2;10.3;10.4;10.5;10.6,2887932624,,ops,Number of times pushed index condition was matched. The smaller the ratio of Handler_icp_attempts to Handler_icp_match the better the filtering
+STATUS,counter,Handler_mrr_init,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,"Counts how many multi-range read (MRR) scans were performed (""Rowid-ordered scan"" in EXPLAIN)."
+STATUS,counter,Handler_mrr_key_refills,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of times MRR key buffer was refilled (not counting the initial fill). A non-zero value indicates there wasn't enough memory to do key sort-and-sweep passes in one go
+STATUS,counter,Handler_mrr_rowid_refills,10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of times MRR rowid buffer was refilled (not counting the initial fill). A non-zero value indicates there wasn't enough memory to do rowid sort-and-sweep passes in one go
+STATUS,counter,Handler_prepare,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of two-phase commit prepares
+STATUS,counter,Handler_read_first,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6529736,,rows,Number of requests to read the first row from an index. A high value indicates many full index scans
+STATUS,counter,Handler_read_key,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9161422188,,rows,"Number of row read requests based on an index value. A high value indicates indexes are regularly being used, which is usually positive"
+STATUS,counter,Handler_read_last,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,274525,,rows,"Number of requests to read the last key in an index. With ORDER BY, the server issues a first-key request followed by several next-key requests, whereas with ORDER BY DESC, the server issues a last-key request followed by several previous-key requests."
+STATUS,counter,Handler_read_next,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16707591509,,rows,The number of requests to read the next row in key order. This value is incremented if you are querying an index column with a range constraint or if you are doing an index scan.
+STATUS,counter,Handler_read_prev,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1152888760,,rows,The number of requests to read the previous row in key order. This read method is mainly used to optimize ORDER BY ... DESC.
+STATUS,counter,Handler_read_retry,10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,Number of read retrys triggered by semi_consistent_read (InnoDB feature)
+STATUS,counter,Handler_read_rnd,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2407608259,,rows,The number of requests to read a row based on a fixed position. This value is high if you are doing a lot of queries that require sorting of the result. You probably have a lot of queries that require MySQL to scan entire tables or you have joins that do not use keys properly.
+STATUS,counter,Handler_read_rnd_deleted,10.1;10.2;10.3;10.4;10.5;10.6,20767661,,rows,Number of requests to delete a row based on its position
+STATUS,counter,Handler_read_rnd_next,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,60656732671,,rows,The number of requests to read the next row in the data file. This value is high if you are doing a lot of table scans. Generally this suggests that your tables are not properly indexed or that your queries are not written to take advantage of the indexes you have.
+STATUS,counter,Handler_rollback,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,14341,,ops,The number of requests for a storage engine to perform a rollback operation
+STATUS,counter,Handler_savepoint,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,11554,,ops,The number of requests for a storage engine to place a savepoint
+STATUS,counter,Handler_savepoint_rollback,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,52858,,ops,The number of requests for a storage engine to roll back to a savepoint
+STATUS,counter,Handler_tmp_delete,10.3;10.4;10.5;10.6,0,,rows,Number of requests to delete a row in a temporary table
+STATUS,counter,Handler_tmp_update,10.1;10.2;10.3;10.4;10.5;10.6,71232822,,rows,Number of requests to update a row to a temporary table
+STATUS,counter,Handler_tmp_write,10.1;10.2;10.3;10.4;10.5;10.6,3281586951,,rows,Number of requests to write a row to a temporary table
+STATUS,counter,Handler_update,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,31126127,,rows,Number of requests to update a row in a non-temporary table
+STATUS,counter,Handler_write,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,22063659,,rows,Number of requests to insert a row in a non-temporary table
+STATUS,counter,Innodb_adaptive_hash_hash_searches,10.5;10.6,0,,rows,Hash searches
+STATUS,counter,Innodb_adaptive_hash_non_hash_searches,10.5;10.6,16339,,rows,Non-hash searches
+STATUS,counter,Innodb_background_log_sync,5.7;10.1;10.5;10.6,3165521,,ops,number of times the InnoDB source thread has written and flushed the redo log
+STATUS,counter,Innodb_buffer_pool_pages_LRU_flushed,5.7,0,Innodb_buffer_pool_pages_lru_flushed,pages,"Number of buffer pool pages which have been flushed from the LRU list, i.e., too old pages which had to be flushed in order to make buffer pool room to read in new data pages"
+STATUS,counter,Innodb_buffer_pool_pages_lru_flushed,10.1;10.5;10.6,0,,pages,"Number of buffer pool pages which have been flushed from the LRU list, i.e., too old pages which had to be flushed in order to make buffer pool room to read in new data pages"
+STATUS,counter,Innodb_buffer_pool_pages_flushed,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5249384,,pages,The number of requests to flush pages from the InnoDB buffer pool
+STATUS,counter,Innodb_buffer_pool_pages_lru_freed,10.6,0,,pages,"Monitor the number of pages that were freed by a buffer pool LRU eviction scan, without flushing"
+STATUS,counter,Innodb_buffer_pool_pages_made_not_young,5.7;10.1;10.5;10.6,8144736790,,pages,The total number of pages not made young in the buffer pool LRU list (pages that have remained in the “old” sublist without being made young).
+STATUS,counter,Innodb_buffer_pool_pages_made_young,5.7;10.1;10.5;10.6,3551109772,,pages,The total number of pages made young in the buffer pool LRU list (moved to the head of sublist of “new” pages).
+STATUS,counter,Innodb_buffer_pool_read_ahead,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,35318,,pages,The number of pages read into the InnoDB buffer pool by the read-ahead background thread.
+STATUS,counter,Innodb_buffer_pool_read_ahead_evicted,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,pages,The number of pages read into the InnoDB buffer pool by the read-ahead background thread that were subsequently evicted without having been accessed by queries
+STATUS,counter,Innodb_buffer_pool_read_ahead_rnd,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of “random” read-aheads initiated by InnoDB. This happens when a query scans a large portion of a table but in random order
+STATUS,counter,Innodb_buffer_pool_read_requests,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,42042020752,,ops,The number of logical read requests.
+STATUS,counter,Innodb_buffer_pool_reads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,305146,,ops,"The number of logical reads that InnoDB could not satisfy from the buffer pool, and had to read directly from disk"
+STATUS,counter,Innodb_buffer_pool_wait_free,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,innodb_buffer_pool_size,events,"Normally, writes to the InnoDB buffer pool happen in the background. When InnoDB needs to read or create a page and no clean pages are available, InnoDB flushes some dirty pages first and waits for that operation to finish. This counter counts instances of these waits. If innodb_buffer_pool_size has been set properly, this value should be small"
+STATUS,counter,Innodb_buffer_pool_write_requests,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,213673621,,ops,The number of writes done to the InnoDB buffer pool
+STATUS,counter,Innodb_buffered_aio_submitted,5.7;10.1;10.5,54883227,,ops,The number of submitted buffered asynchronous I/O requests. 
+STATUS,counter,Innodb_data_fsyncs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,18448850,innodb_flush_method,ops,The number of fsync() operations so far. The frequency of fsync() calls is influenced by the setting of the innodb_flush_method configuration option. Counts the number of fdatasync() operations if innodb_use_fdatasync is enabled.
+STATUS,counter,Innodb_data_read,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5545380352,,bytes,The amount of data read since the server was started (in bytes)
+STATUS,counter,Innodb_data_reads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,366459,,ops,The total number of data reads (OS file reads)
+STATUS,counter,Innodb_data_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,22016384,,ops,The total number of data writes
+STATUS,counter,Innodb_data_written,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,223000000000,,bytes,"The amount of data written so far, in bytes."
+STATUS,counter,Innodb_dblwr_pages_written,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5249253,,pages,The number of pages that have been written to the doublewrite buffer. 
+STATUS,counter,Innodb_dblwr_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,575723,,ops,The number of doublewrite operations that have been performed
+STATUS,counter,Innodb_deadlocks,10.1;10.5;10.6,0,,,
+STATUS,counter,Innodb_defragment_compression_failures,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_defragment_count,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_defragment_failures,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_key_rotation_list_length,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_merge_blocks_decrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_merge_blocks_encrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_rowlog_blocks_decrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_rowlog_blocks_encrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_temp_blocks_decrypted,10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_n_temp_blocks_encrypted,10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_num_key_requests,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_redo_key_version,5.7,0,,,
+STATUS,counter,Innodb_encryption_rotation_estimated_iops,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_rotation_pages_flushed,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_rotation_pages_modified,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_rotation_pages_read_from_cache,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_encryption_rotation_pages_read_from_disk,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_ibuf_discarded_delete_marks,10.1;10.5;10.6,0,,,
+STATUS,counter,Innodb_ibuf_discarded_deletes,10.1;10.5;10.6,0,,,
+STATUS,counter,Innodb_ibuf_discarded_inserts,10.1;10.5;10.6,0,,,
+STATUS,counter,Innodb_ibuf_merged_delete_marks,10.1;10.5;10.6,32022,,,
+STATUS,counter,Innodb_ibuf_merged_deletes,10.1;10.5;10.6,20797,,,
+STATUS,counter,Innodb_ibuf_merged_inserts,10.1;10.5;10.6,44785,,,
+STATUS,counter,Innodb_ibuf_merges,10.1;10.5;10.6,29619,,,
+STATUS,counter,Innodb_instant_alter_column,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_log_waits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of times that the log buffer was too small and a wait was required for it to be flushed before continuing
+STATUS,counter,Innodb_log_write_requests,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,73174551,,ops,The number of write requests for the InnoDB redo log.
+STATUS,counter,Innodb_log_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16153265,,ops,The number of physical writes to the InnoDB redo log file.
+STATUS,counter,Innodb_master_thread_active_loops,5.7;10.1;10.5;10.6,3165467,,,
+STATUS,counter,Innodb_master_thread_idle_loops,5.7;10.1;10.5;10.6,54,,,
+STATUS,counter,Innodb_mutex_os_waits,10.1,361887,,,
+STATUS,counter,Innodb_mutex_spin_rounds,10.1,47117155,,,
+STATUS,counter,Innodb_mutex_spin_waits,10.1,108747101,,,
+STATUS,counter,Innodb_num_index_pages_written,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_non_index_pages_written,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_open_files,5.6;5.7;8.0;10.2;10.3;10.4;10.5;10.6,2499,,,
+STATUS,counter,Innodb_num_page_compressed_trim_op,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_page_compressed_trim_op_saved,10.1,0,,,
+STATUS,counter,Innodb_num_pages_decrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_pages_encrypted,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_pages_page_compressed,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_pages_page_compression_error,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_num_pages_page_decompressed,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_os_log_fsyncs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16173454,,ops,The number of fsync() writes done to the InnoDB redo log files
+STATUS,counter,Innodb_os_log_pending_fsyncs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_os_log_pending_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_os_log_written,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,54532993536,,bytes,The number of bytes written to the InnoDB redo log files.
+STATUS,counter,Innodb_pages_created,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,270878,,pages,The number of pages created by operations on InnoDB tables
+STATUS,counter,Innodb_pages_read,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,342285,,pages,The number of pages read from the InnoDB buffer pool by operations on InnoDB tables.
+STATUS,counter,Innodb_pages_written,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5249384,,pages,The number of pages written by operations on InnoDB tables
+STATUS,counter,Innodb_row_lock_time,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,161880,,milliseconds,"The total time spent in acquiring row locks for InnoDB tables, in milliseconds"
+STATUS,counter,Innodb_row_lock_waits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6615,,ops,The number of times operations on InnoDB tables had to wait for a row lock
+STATUS,counter,Innodb_rows_deleted,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2642588,,rows,The number of rows deleted from InnoDB tables
+STATUS,counter,Innodb_rows_inserted,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5171589,,rows,The number of rows inserted into InnoDB tables
+STATUS,counter,Innodb_rows_read,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,29105474168,,rows,The number of rows red from InnoDB tables
+STATUS,counter,Innodb_rows_updated,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12478371,,rows,The number of rows updated in InnoDB tables
+STATUS,counter,Innodb_s_lock_spin_rounds,10.1,18852686,,,
+STATUS,counter,Innodb_s_lock_spin_waits,10.1,2569879,,,
+STATUS,counter,Innodb_sampled_pages_skipped,8,0,,,
+STATUS,counter,Innodb_secondary_index_triggered_cluster_reads,5.7;10.1;10.2;10.3;10.4;10.5;10.6,6298595315,,,
+STATUS,counter,Innodb_secondary_index_triggered_cluster_reads_avoided,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Innodb_system_rows_deleted,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,The number of rows deleted from InnoDB tables belonging to system-created schemas
+STATUS,counter,Innodb_system_rows_inserted,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,The number of rows inserted into InnoDB tables belonging to system-created schemas.
+STATUS,counter,Innodb_system_rows_read,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,The number of rows read from InnoDB tables belonging to system-created schemas
+STATUS,counter,Innodb_system_rows_updated,8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,The number of rows updated InnoDB tables belonging to system-created schemas
+STATUS,counter,Innodb_truncated_status_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of times output from the SHOW ENGINE INNODB STATUS statement has been truncated
+STATUS,counter,Innodb_undo_tablespaces_active,8,2,,tablespaces,The number of active undo tablespaces. Includes both implicit (InnoDB-created) and explicit (user-created) undo tablespaces. For information about undo tablespaces
+STATUS,counter,Innodb_undo_tablespaces_explicit,8,0,,tablespaces,The number of user-created undo tablespaces
+STATUS,counter,Innodb_undo_tablespaces_implicit,8,2,,tablespaces,The number of undo tablespaces created by InnoDB. Two default undo tablespaces are created by InnoDB when the MySQL instance is initialized
+STATUS,counter,Innodb_undo_tablespaces_total,8,2,,tablespaces,"The total number of undo tablespaces. Includes both implicit (InnoDB-created) and explicit (user-created) undo tablespaces, active and inactive"
+STATUS,counter,Innodb_undo_truncations,10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Key_read_requests,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20049314598,,MyISAM blocks,The number of requests to read a key block from the MyISAM key cache
+STATUS,counter,Key_reads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,40342451,key_buffer_size,MyISAM blocks,"The number of physical reads of a key block from disk into the MyISAM key cache. If Key_reads is large, then your key_buffer_size value is probably too small. The cache miss rate can be calculated as Key_reads/Key_read_requests"
+STATUS,counter,Key_write_requests,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,46818875,,MyISAM blocks,The number of requests to write a key block to the MyISAM key cache
+STATUS,counter,Key_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32102843,,MyISAM blocks,The number of physical writes of a key block from the MyISAM key cache to disk
+STATUS,counter,Locked_connects,5.7;8.0,0,,,
+STATUS,counter,Master_gtid_wait_count,10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of attempts to connect to locked user accounts.
+STATUS,counter,Master_gtid_wait_time,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Master_gtid_wait_timeouts,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Max_execution_time_exceeded,5.7;8.0,0,,statements,The number of SELECT statements for which the execution timeout was exceeded
+STATUS,counter,Max_execution_time_set,5.7;8.0,331,max_execution_time,statements,"The number of SELECT statements for which a nonzero execution timeout was set. This includes statements that include a nonzero MAX_EXECUTION_TIME optimizer hint, and statements that include no such hint but execute while the timeout indicated by the max_execution_time system variable is nonzero"
+STATUS,counter,Max_execution_time_set_failed,5.7;8.0,0,,,The number of SELECT statements for which the attempt to set an execution timeout failed
+STATUS,counter,Max_statement_time_exceeded,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Mysqlx_aborted_clients,8,0,,,
+STATUS,counter,Mysqlx_bytes_received,8,0,,,
+STATUS,counter,Mysqlx_bytes_received_compressed_payload,8,0,,,
+STATUS,counter,Mysqlx_bytes_received_uncompressed_frame,8,0,,,
+STATUS,counter,Mysqlx_bytes_sent,8,0,,,
+STATUS,counter,Mysqlx_bytes_sent_compressed_payload,8,0,,,
+STATUS,counter,Mysqlx_bytes_sent_uncompressed_frame,8,0,,,
+STATUS,counter,Mysqlx_connection_accept_errors,8,0,,,
+STATUS,counter,Mysqlx_connections_accepted,8,0,,,
+STATUS,counter,Mysqlx_connections_closed,8,0,,,
+STATUS,counter,Mysqlx_connections_rejected,8,0,,,
+STATUS,counter,Mysqlx_crud_create_view,8,0,,,
+STATUS,counter,Mysqlx_crud_delete,8,0,,,
+STATUS,counter,Mysqlx_crud_drop_view,8,0,,,
+STATUS,counter,Mysqlx_crud_find,8,0,,,
+STATUS,counter,Mysqlx_crud_insert,8,0,,,
+STATUS,counter,Mysqlx_crud_modify_view,8,0,,,
+STATUS,counter,Mysqlx_crud_update,8,0,,,
+STATUS,counter,Mysqlx_cursor_close,8,0,,,
+STATUS,counter,Mysqlx_cursor_fetch,8,0,,,
+STATUS,counter,Mysqlx_cursor_open,8,0,,,
+STATUS,counter,Mysqlx_errors_sent,8,0,,,
+STATUS,counter,Mysqlx_errors_unknown_message_type,8,0,,,
+STATUS,counter,Mysqlx_expect_close,8,0,,,
+STATUS,counter,Mysqlx_expect_open,8,0,,,
+STATUS,counter,Mysqlx_init_error,8,0,,,
+STATUS,counter,Mysqlx_messages_sent,8,0,,,
+STATUS,counter,Mysqlx_notice_global_sent,8,0,,,
+STATUS,counter,Mysqlx_notice_other_sent,8,0,,,
+STATUS,counter,Mysqlx_notice_warning_sent,8,0,,,
+STATUS,counter,Mysqlx_notified_by_group_replication,8,0,,,
+STATUS,counter,Mysqlx_prep_deallocate,8,0,,,
+STATUS,counter,Mysqlx_prep_execute,8,0,,,
+STATUS,counter,Mysqlx_prep_prepare,8,0,,,
+STATUS,counter,Mysqlx_rows_sent,8,0,,,
+STATUS,counter,Mysqlx_sessions,8,0,,,
+STATUS,counter,Mysqlx_sessions_accepted,8,0,,,
+STATUS,counter,Mysqlx_sessions_closed,8,0,,,
+STATUS,counter,Mysqlx_sessions_fatal_error,8,0,,,
+STATUS,counter,Mysqlx_sessions_killed,8,0,,,
+STATUS,counter,Mysqlx_sessions_rejected,8,0,,,
+STATUS,counter,Mysqlx_ssl_accepts,8,0,,,
+STATUS,counter,Mysqlx_ssl_finished_accepts,8,0,,,
+STATUS,counter,Mysqlx_stmt_create_collection,8,0,,,
+STATUS,counter,Mysqlx_stmt_create_collection_index,8,0,,,
+STATUS,counter,Mysqlx_stmt_disable_notices,8,0,,,
+STATUS,counter,Mysqlx_stmt_drop_collection,8,0,,,
+STATUS,counter,Mysqlx_stmt_drop_collection_index,8,0,,,
+STATUS,counter,Mysqlx_stmt_enable_notices,8,0,,,
+STATUS,counter,Mysqlx_stmt_ensure_collection,8,0,,,
+STATUS,counter,Mysqlx_stmt_execute_mysqlx,8,0,,,
+STATUS,counter,Mysqlx_stmt_execute_sql,8,0,,,
+STATUS,counter,Mysqlx_stmt_execute_xplugin,8,0,,,
+STATUS,counter,Mysqlx_stmt_get_collection_options,8,0,,,
+STATUS,counter,Mysqlx_stmt_kill_client,8,0,,,
+STATUS,counter,Mysqlx_stmt_list_clients,8,0,,,
+STATUS,counter,Mysqlx_stmt_list_notices,8,0,,,
+STATUS,counter,Mysqlx_stmt_list_objects,8,0,,,
+STATUS,counter,Mysqlx_stmt_modify_collection_options,8,0,,,
+STATUS,counter,Mysqlx_stmt_ping,8,0,,,
+STATUS,counter,Opened_files,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,98108529,,ops,The number of files that have been opened with my_open() (a mysys library function). Parts of the server that open files without using this function do not increment the count
+STATUS,counter,Opened_plugin_libraries,10.1;10.2;10.3;10.4;10.5;10.6,47,,,
+STATUS,counter,Opened_table_definitions,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12139478,,ops,The number of table definitions that have been cached
+STATUS,counter,Opened_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,11308804,table_open_cache,ops,"The number of tables that have been opened. If Opened_tables is big, your table_open_cache value is probably too small"
+STATUS,counter,Opened_views,10.1;10.2;10.3;10.4;10.5;10.6,25969,,,
+STATUS,counter,Performance_schema_accounts_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_cond_classes_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_cond_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_digest_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_file_classes_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_file_handles_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_file_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_hosts_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_index_stat_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_locker_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_memory_classes_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_metadata_lock_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_mutex_classes_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_mutex_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_nested_statement_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_prepared_statements_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_program_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_rwlock_classes_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_rwlock_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_session_connect_attrs_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_socket_classes_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_socket_instances_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_stage_classes_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_statement_classes_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_table_handles_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_table_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_table_lock_stat_lost,5.7;8.0;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_thread_classes_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_thread_instances_lost,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Performance_schema_users_lost,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Qcache_hits,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,1868137430,,ops,Number of requests served by the query cache. The global value can be flushed by FLUSH STATUS
+STATUS,counter,Qcache_inserts,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,318879948,,ops,Number of queries ever cached in the query cache. The global value can be flushed by FLUSH
+STATUS,counter,Qcache_lowmem_prunes,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,78381408,,ops,Number of pruning operations performed to remove old results to make space for new results in the query cache. The global value can be flushed by FLUSH STATU
+STATUS,counter,Qcache_not_cached,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,27295251,,ops,"Number of queries that are uncacheable by the query cache, or use SQL_NO_CACHE. The global value can be flushed by FLUSH STATUS"
+STATUS,counter,Queries,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2373884944,Questions,statements,"The number of statements executed by the server. This variable includes statements executed within stored programs, unlike the Questions variable. It does not count COM_PING or COM_STATISTICS commands."
+STATUS,counter,Questions,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2339520833,Queries,statements,"The number of statements executed by the server. This includes only statements sent to the server by clients and not statements executed within stored programs, unlike the Queries variable. This variable does not count COM_PING, COM_STATISTICS, COM_STMT_PREPARE, COM_STMT_CLOSE, or COM_STMT_RESET commands"
+STATUS,counter,Rows_read,10.1;10.2;10.3;10.4;10.5;10.6,82420380937,,rows,Number of requests to read a row (excluding temporary tables)
+STATUS,counter,Rows_sent,10.1;10.2;10.3;10.4;10.5;10.6,18653048895,,rows,
+STATUS,counter,Rows_tmp_read,10.1;10.2;10.3;10.4;10.5;10.6,4823284354,,rows,Number of requests to read a row in a temporary table
+STATUS,counter,Rpl_semi_sync_master_net_wait_time,10.3;10.4;10.5;10.6,0,,microseconds,"The total time in microseconds the source waited for replica replies. This variable is always 0, and is deprecated; expect it to be removed in a future version"
+STATUS,counter,Rpl_semi_sync_master_net_waits,10.3;10.4;10.5;10.6,0,,ops,The total number of times the source waited for replica replies
+STATUS,counter,Rpl_semi_sync_master_no_times,10.3;10.4;10.5;10.6,0,,ops,The number of times the source turned off semisynchronous replication
+STATUS,counter,Rpl_semi_sync_master_no_tx,10.3;10.4;10.5;10.6,0,,ops,The number of commits that were not acknowledged successfully by a replica
+STATUS,counter,Rpl_semi_sync_master_timefunc_failures,10.3;10.4;10.5;10.6,0,,ops,The number of times the source failed when calling time functions such as gettimeofday()
+STATUS,counter,Rpl_semi_sync_master_tx_wait_time,10.3;10.4;10.5;10.6,0,,microseconds,The total time in microseconds the source waited for transactions
+STATUS,counter,Rpl_semi_sync_master_tx_waits,10.3;10.4;10.5;10.6,0,,ops,The total number of times the source waited for transactions
+STATUS,counter,Rpl_semi_sync_master_wait_pos_backtraverse,10.3;10.4;10.5;10.6,0,,ops,The total number of times the source waited for an event with binary coordinates lower than events waited for previously. This can occur when the order in which transactions start waiting for a reply is different from the order in which their binary log events are written
+STATUS,counter,Rpl_semi_sync_master_yes_tx,10.3;10.4;10.5;10.6,0,,ops,The number of commits that were acknowledged successfully by a replica
+STATUS,counter,Rpl_semi_sync_slave_send_ack,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Rpl_transactions_multi_engine,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Select_full_join,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1025216,,statements,"The number of joins that perform table scans because they do not use indexes. If this value is not 0, you should carefully check the indexes of your tables"
+STATUS,counter,Select_full_range_join,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,91741,,,The number of joins that used a range search on a reference table
+STATUS,counter,Select_range,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,15623140,,,The number of joins that used ranges on the first table. This is normally not a critical issue even if the value is quite large
+STATUS,counter,Select_range_check,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,95,,,"The number of joins without keys that check for key usage after each row. If this is not 0, you should carefully check the indexes of your tables"
+STATUS,counter,Select_scan,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,28997997,,,The number of joins that did a full scan of the first table
+STATUS,counter,Slave_connections,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Slave_received_heartbeats,5.5;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Slave_retried_transactions,5.5;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Slave_skipped_errors,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Slow_launch_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,slow_launch_time,ops,The number of threads that have taken more than slow_launch_time seconds to create
+STATUS,counter,Slow_queries,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1965,long_query_time,statements,The number of queries that have taken more than long_query_time seconds. This counter increments regardless of whether the slow query log is enabled
+STATUS,counter,Sort_merge_passes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,12976,sort_buffer_size,ops,"The number of merge passes that the sort algorithm has had to do. If this value is large, you should consider increasing the value of the sort_buffer_size system variable."
+STATUS,counter,Sort_priority_queue_sorts,10.1;10.2;10.3;10.4;10.5;10.6,254367428,,statements,The number of times that sorting was done through a priority queue. 
+STATUS,counter,Sort_range,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,276374530,,statements,The number of sorts that were done using ranges
+STATUS,counter,Sort_rows,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2468640586,,rows,The number of sorted rows
+STATUS,counter,Sort_scan,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,18706524,,statements,The number of sorts that were done by scanning the table
+STATUS,counter,Ssl_accept_renegotiates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of negotiates needed to establish the connection
+STATUS,counter,Ssl_accepts,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of accepted SSL connections
+STATUS,counter,Ssl_callback_cache_hits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of callback cache hits.
+STATUS,counter,Ssl_client_connects,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,server connections,The number of SSL connection attempts to an SSL-enabled replication source server.
+STATUS,counter,Ssl_connect_renegotiates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,server connections,The number of negotiates needed to establish the connection to an SSL-enabled replication source server
+STATUS,counter,Ssl_finished_accepts,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of successful replica connections to an SSL-enabled replication source server.
+STATUS,counter,Ssl_session_cache_hits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of SSL session cache hits
+STATUS,counter,Ssl_session_cache_misses,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of SSL session cache misses
+STATUS,counter,Ssl_session_cache_overflows,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of SSL session cache overflows
+STATUS,counter,Ssl_session_cache_timeouts,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,The number of SSL session cache timeouts
+STATUS,counter,Ssl_sessions_reused,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,How many SSL connections were reused from the cache.
+STATUS,counter,Ssl_used_session_cache_entries,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,connections,How many SSL session cache entries were used
+STATUS,counter,Syncs,10.1;10.2;10.3;10.4;10.5;10.6,102206,,ops,"Number of times my_sync() has been called, or the number of times the server has had to force data to disk. Covers the binary log, .frm creation (if these operations are configured to sync) and some storage engines (Archive, CSV, Aria), but not XtraDB/InnoDB)"
+STATUS,counter,Table_locks_immediate,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,315610595,,ops,The number of times that a request for a table lock could be granted immediately
+STATUS,counter,Table_locks_waited,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1670000,,ops,"The number of times that a request for a table lock could not be granted immediately and a wait was needed. If this is high and you have performance problems, you should first optimize your queries, and then either split your table or tables or use replication"
+STATUS,counter,Table_open_cache_active_instances,10.3;10.4;10.5;10.6,1,,,
+STATUS,counter,Table_open_cache_hits,5.6;5.7;8.0;10.3;10.4;10.5;10.6,361186,,ops,The number of hits for open tables cache lookups
+STATUS,counter,Table_open_cache_misses,5.6;5.7;8.0;10.3;10.4;10.5;10.6,4598,table_open_cache,ops,The number of misses for open tables cache lookups
+STATUS,counter,Table_open_cache_overflows,5.6;5.7;8.0;10.3;10.4;10.5;10.6,0,table_open_cache,ops,"The number of overflows for the open tables cache. This is the number of times, after a table is opened or closed, a cache instance has an unused entry and the size of the instance is larger than table_open_cache / table_open_cache_instances"
+STATUS,counter,Tc_log_page_waits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of times a two-phase commit was forced to wait for a free memory-mapped file-based transaction coordinator log page. The global value can be flushed by FLUSH STATUS
+STATUS,counter,Threads_created,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,596,thread_cache_size,ops,"The number of threads created to handle connections. If Threads_created is big, you may want to increase the thread_cache_size value. The cache miss rate can be calculated as Threads_created/Connections"
+STATUS,counter,Transactions_gtid_foreign_engine,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Transactions_multi_engine,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Update_scan,10.1;10.2;10.3;10.4;10.5;10.6,1139089,,statements,Number of updates that required a full table scan
+STATUS,counter,Uptime,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,665129,,seconds,The number of seconds that the server has been up
+STATUS,counter,Uptime_since_flush_status,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,665129,,seconds,The number of seconds since the most recent FLUSH STATUS statement
+STATUS,gauge,Acl_cache_items_count,8,0,,,
+STATUS,gauge,Acl_proxy_users,10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+STATUS,gauge,Acl_roles,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Acl_users,10.1;10.2;10.3;10.4;10.5;10.6,8907,,,
+STATUS,gauge,Aria_pagecache_blocks_not_flushed,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Aria_pagecache_blocks_unused,10.1;10.2;10.3;10.4;10.5;10.6,15706,,,
+STATUS,gauge,Aria_pagecache_blocks_used,10.1;10.2;10.3;10.4;10.5;10.6,11878,,,
+STATUS,setting,Binlog_snapshot_file,5.7;10.1;10.2;10.3;10.4;10.5;10.6,,,filename,
+STATUS,state,Binlog_snapshot_gtid_executed,5.7,,,,
+STATUS,state,Binlog_snapshot_position,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Caching_sha2_password_rsa_public_key,8,X.509 public key,,,
+STATUS,setting,Compression,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+STATUS,setting,Current_tls_ca,8,ca.pem,,,
+STATUS,setting,Current_tls_capath,8,,,,
+STATUS,setting,Current_tls_cert,8,server-cert.pem,,,
+STATUS,setting,Current_tls_cipher,8,,,,
+STATUS,setting,Current_tls_ciphersuites,8,,,,
+STATUS,setting,Current_tls_crl,8,,,,
+STATUS,setting,Current_tls_crlpath,8,,,,
+STATUS,setting,Current_tls_key,8,server-key.pem,,,
+STATUS,setting,Current_tls_version,8,"TLSv1,TLSv1.1,TLSv1.2,TLSv1.3",,,
+STATUS,setting,Enable_governor,5.7;10.1;10.2;10.3;10.4,2,,,
+STATUS,,Error_log_buffered_bytes,8,4888,,,
+STATUS,,Error_log_buffered_events,8,37,,,
+STATUS,,Error_log_latest_write,8,1630000000000000,,,
+STATUS,setting,Innodb_available_undo_logs,5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,128,innodb_undo_logs,number,"Total number available InnoDB undo logs. Differs from the innodb_undo_logs system variable, which specifies the number of active undo logs"
+STATUS,gauge,Innodb_buffer_pool_bytes_data,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10107092992,,bytes,"The total number of bytes in the InnoDB buffer pool containing data. The number includes both dirty and clean pages. For more accurate memory usage calculations than with Innodb_buffer_pool_pages_data, when compressed tables cause the buffer pool to hold pages of different sizes"
+STATUS,gauge,Innodb_buffer_pool_bytes_dirty,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100253696,,bytes,"The total current number of bytes held in dirty pages in the InnoDB buffer pool. For more accurate memory usage calculations than with Innodb_buffer_pool_pages_dirty, when compressed tables cause the buffer pool to hold pages of different sizes"
+STATUS,status,Innodb_buffer_pool_dump_status,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,text,A text description of the progress or final status of the last Innodb buffer pool dump
+STATUS,status,Innodb_buffer_pool_load_incomplete,10.3;10.4;10.5;10.6,OFF,,ONOFF,"Whether or not the loaded buffer pool is incomplete, for example after a shutdown or abort during innodb buffer pool load from file caused an incomplete save"
+STATUS,status,Innodb_buffer_pool_load_status,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,Buffer pool(s) load completed at 210921  1:19:47,,text,The status of a buffer pool load operation
+STATUS,gauge,Innodb_buffer_pool_pages_data,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,612956,,pages,"The number of pages in the InnoDB buffer pool containing data. The number includes both dirty and clean pages. When using compressed tables, the reported Innodb_buffer_pool_pages_data value may be larger than Innodb_buffer_pool_pages_total"
+STATUS,gauge,Innodb_buffer_pool_pages_dirty,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6401,,pages,The current number of dirty pages in the InnoDB buffer pool
+STATUS,gauge,Innodb_buffer_pool_pages_free,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,21936,,pages,The number of free pages in the InnoDB buffer pool
+STATUS,gauge,Innodb_buffer_pool_pages_misc,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20468,,pages,"The number of pages in the InnoDB buffer pool that are busy because they have been allocated for administrative overhead, such as row locks or the adaptive hash index."
+STATUS,gauge,Innodb_buffer_pool_pages_old,5.7;10.1;10.5;10.6,184942,innodb_old_blocks_pct,pages,The number of buffer pool pages which are considered to be old
+STATUS,gauge,Innodb_buffer_pool_pages_total,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,655360,,pages,"The total size of the InnoDB buffer pool, in pages. When using compressed tables, the reported Innodb_buffer_pool_pages_data value may be larger than Innodb_buffer_pool_pages_total"
+STATUS,status,Innodb_buffer_pool_resize_status,5.7;8.0;10.2;10.3;10.4;10.5;10.6,,,text,"The status of an operation to resize the InnoDB buffer pool dynamically, triggered by setting the innodb_buffer_pool_size parameter dynamically. The innodb_buffer_pool_size parameter is dynamic, which allows you to resize the buffer pool without restarting the server."
+STATUS,gauge,Innodb_checkpoint_age,5.7;10.1;10.5;10.6,619500356,,number,"The checkpoint age ,equivalent to subtracting ""Last checkpoint at"" from ""Log sequence number""."
+STATUS,gauge,Innodb_checkpoint_max_age,5.7;10.1;10.5;10.6,3478212404,Innodb_checkpoint_age,number,The largest checkpoint age.
+STATUS,gauge,Innodb_data_pending_fsyncs,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of pending InnoDB fsync (sync-to-disk) calls. fsync call frequency can be influenced by the innodb_flush_method configuration option
+STATUS,gauge,Innodb_data_pending_reads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of pending InnoDB reads
+STATUS,gauge,Innodb_data_pending_writes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,Number of pending InnoDB writes
+STATUS,setting,Innodb_have_atomic_builtins,5.5;5.6;10.1,ON,,ONOFF,"Whether the server has been built with atomic instructions, provided by the CPU ensuring that critical low-level operations can't be interrupted. "
+STATUS,setting,Innodb_have_bzip2,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether the server has the bzip2 compression method available
+STATUS,setting,Innodb_have_lz4,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether the server has the lz4 compression method available
+STATUS,setting,Innodb_have_lzma,10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,Whether the server has the lzma compression method available
+STATUS,setting,Innodb_have_lzo,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether the server has the lzo compression method available
+STATUS,setting,Innodb_have_punch_hole,10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,
+STATUS,setting,Innodb_have_snappy,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether the server has the snappy compression method available
+STATUS,gauge-critical,Innodb_history_list_length,10.1;10.5;10.6,13,,number,History list length
+STATUS,gauge,Innodb_ibuf_free_list,5.7;10.1;10.5;10.6,5492,,number,Insert buffer free list length
+STATUS,gauge,Innodb_ibuf_segment_size,5.7;10.1;10.5;10.6,5494,,number,Insert buffer segment size
+STATUS,gauge,Innodb_ibuf_size,10.1;10.5;10.6,1,,number,Insert buffer suze
+STATUS,gauge,Innodb_lsn_current,5.7;10.1;10.5;10.6,7100000000000,,number,Current log sequence number
+STATUS,gauge,Innodb_lsn_flushed,5.7;10.1;10.5;10.6,7100000000000,,number,Log sequence number most recently flushed to disk
+STATUS,gauge,Innodb_lsn_last_checkpoint,5.7;10.1;10.5;10.6,7100000000000,,number,Log sequence number of last checkpoint
+STATUS,gauge,Innodb_max_trx_id,5.7;10.1;10.5;10.6,4173390642,,number,Maximum transaction id
+STATUS,gauge,Innodb_mem_adaptive_hash,5.7;10.1;10.5;10.6,390402496,,bytes,Adaptive hash index size
+STATUS,gauge,Innodb_mem_dictionary,5.7;10.1;10.5;10.6,161454694,,bytes,In-memory data dictionary size
+STATUS,gauge,Innodb_mem_total,10.1,8992587776,,bytes,Total memory InnoDB has allocated in the process heap.
+STATUS,gauge,Innodb_oldest_view_low_limit_trx_id,5.7;10.1,4173390570,,number,Transaction id
+STATUS,gauge,Innodb_onlineddl_pct_progress,10.1;10.2;10.3;10.4;10.5;10.6,0,,percent,Progress of in-place alter table. It might be not so accurate because in-place alter is highly dependent on disk and buffer pool status
+STATUS,gauge,Innodb_onlineddl_rowlog_pct_used,10.1;10.2;10.3;10.4;10.5;10.6,0,,percent1000,Row log buffer usage in 5-digit integer 10000=100%
+STATUS,gauge,Innodb_onlineddl_rowlog_rows,10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,Number of rows stored in the row log buffer
+STATUS,counter,Innodb_os_merge_buffers_merged,10.1,0,,,
+STATUS,counter,Innodb_os_merge_buffers_read,10.1,1,,,
+STATUS,counter,Innodb_os_merge_buffers_written,10.1,1,,,
+STATUS,gauge,Innodb_page_compression_saved,10.1;10.2;10.3;10.4;10.5;10.6,0,,Bytes,Memory saved by page compression
+STATUS,counter,Innodb_page_compression_trim_sect1024,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 1KiB block-size
+STATUS,counter,Innodb_page_compression_trim_sect16384,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 16KiB block-size
+STATUS,counter,Innodb_page_compression_trim_sect2048,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 2KiB block-size
+STATUS,counter,Innodb_page_compression_trim_sect32768,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 32KiB block-size
+STATUS,counter,Innodb_page_compression_trim_sect4096,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 4KiB block-size
+STATUS,counter,Innodb_page_compression_trim_sect512,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 512 byte block-size
+STATUS,counter,Innodb_page_compression_trim_sect8192,10.1,0,,,Number of TRIM operations performed for the page-compression/NVM Compression workload for the 8KiB block-size
+STATUS,setting,Innodb_page_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16384,,bytes,"Page size used by InnoDB. Defaults to 16KB, can be compiled with a different value"
+STATUS,counter,Innodb_pages0_read,5.7;10.1;10.2;10.3,24146,,ops,Counter for keeping track of reads of the first page of InnoDB data files
+STATUS,gauge,Innodb_purge_trx_id,5.7;10.1,4173390532,,number,oldest transaction id whose records have not yet been purged
+STATUS,state,Innodb_purge_undo_no,5.7;10.1,0,,number,
+STATUS,state,Innodb_read_views_memory,10.1,912,,,
+STATUS,setting,Innodb_redo_log_enabled,8,ON,,text,Whether redo logging is enabled or disabled. Introduced in MySQL 8.0.21
+STATUS,gauge,Innodb_row_lock_current_waits,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of row locks currently being waited for by operations on InnoDB tables
+STATUS,gauge,Innodb_row_lock_time_avg,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,24,,milliseconds,"The average time to acquire a row lock for InnoDB tables, in milliseconds"
+STATUS,gauge,Innodb_row_lock_time_max,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,15694,,milliseconds,"The maximum time to acquire a row lock for InnoDB tables, in milliseconds"
+STATUS,counter,Innodb_s_lock_os_waits,10.1,514267,,ops,
+STATUS,counter,Innodb_x_lock_os_waits,8,0,,ops,
+STATUS,gauge,Innodb_scan_data_size,5.7,670726,,bytes,Size of data in all InnoDB pages read inside a query
+STATUS,gauge,Innodb_scan_deleted_recs_size,5.7,100365,,bytes,Size of deleted records in all InnoDB pages read inside a query
+STATUS,gauge,Innodb_scan_pages_contiguous,5.7,19,,pages,Number of contiguous page reads in a query
+STATUS,gauge,Innodb_scan_pages_disjointed,5.7,39,,pages,Number of disjointed page reads in a query
+STATUS,gauge,Innodb_scan_pages_total_seek_distance,5.7,4474,,,Total seek distance when moving between pages
+STATUS,counter,Innodb_scrub_background_page_reorganizations,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_background_page_split_failures_missing_index,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_background_page_split_failures_out_of_filespace,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_background_page_split_failures_underflow,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_background_page_split_failures_unknown,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_background_page_splits,5.7;10.1;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_scrub_log,5.7;10.2;10.3;10.4,0,,,Relates to tablespace encryption
+STATUS,counter,Innodb_x_lock_os_waits,10.1,41048,,ops,
+STATUS,counter,Innodb_x_lock_spin_rounds,10.1,9239269,,ops,
+STATUS,cpinter,Innodb_x_lock_spin_waits,10.1,560534,,ops,
+STATUS,gauge,Key_blocks_not_flushed,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,MyISAM blocks,The number of key blocks in the MyISAM key cache that have changed but have not yet been flushed to disk
+STATUS,gauge,Key_blocks_unused,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,75917,key_buffer_size,MyISAM blocks,The number of unused blocks in the MyISAM key cache. You can use this value to determine how much of the key cache is in use
+STATUS,gauge,Key_blocks_used,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,107163,,MyISAM blocks,The number of used blocks in the MyISAM key cache. This value is a high-water mark that indicates the maximum number of blocks that have ever been in use at one time
+STATUS,gauge,Key_blocks_warm,10.1;10.2;10.3;10.4;10.5;10.6,11660,,MyISAM blocks,
+STATUS,gauge,Last_query_cost,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,cost,The total cost of the last compiled query as computed by the query optimizer. This is useful for comparing the cost of different query plans for the same query. The default value of 0 means that no query has been compiled yet. The default value is 0. Last_query_cost has session scope.
+STATUS,gauge,Last_query_partial_plans,5.6;5.7,0,,ops,The number of iterations the query optimizer made in execution plan construction for the previous query. Last_query_cost has session scope.
+STATUS,gauge,Max_used_connections,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,321,,connections,The maximum number of connections that have been in use simultaneously since the server started
+STATUS,status,Max_used_connections_time,5.7;8.0,9/13/2021 13:01,,timestring,The time at which Max_used_connections reached its current value
+STATUS,gauge,Memory_used,10.1;10.2;10.3;10.4;10.5;10.6,681328744,,,
+STATUS,state,Memory_used_initial,10.3;10.4;10.5;10.6,289824616,,,
+STATUS,setting,Mysqlx_address,8,::,,,
+STATUS,setting,Mysqlx_compression_algorithm,8,,,,
+STATUS,setting,Mysqlx_compression_level,8,,,,
+STATUS,state,Mysqlx_connection_errors,8,0,,,
+STATUS,setting,Mysqlx_port,8,33060,,,
+STATUS,setting,Mysqlx_socket,8,/var/run/mysqld/mysqlx.sock,,,
+STATUS,setting,Mysqlx_ssl_active,8,,,,
+STATUS,setting,Mysqlx_ssl_cipher,8,,,,
+STATUS,setting,Mysqlx_ssl_cipher_list,8,,,,
+STATUS,setting,Mysqlx_ssl_ctx_verify_depth,8,9.22E+018,,,
+STATUS,setting,Mysqlx_ssl_ctx_verify_mode,8,5,,,
+STATUS,setting,Mysqlx_ssl_server_not_after,8,Sep 29 18:20:16 2031 GMT,,,
+STATUS,setting,Mysqlx_ssl_server_not_before,8,Oct  1 18:20:16 2021 GMT,,,
+STATUS,setting,Mysqlx_ssl_verify_depth,8,,,,
+STATUS,setting,Mysqlx_ssl_verify_mode,8,,,,
+STATUS,setting,Mysqlx_ssl_version,8,,,,
+STATUS,gauge,Mysqlx_worker_threads,8,2,,,
+STATUS,gauge,Mysqlx_worker_threads_active,8,0,,,
+STATUS,gauge,Not_flushed_delayed_rows,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,rows,This status variable is deprecated (because DELAYED inserts are not supported); expect it to be removed in a future release
+STATUS,gauge,Ongoing_anonymous_transaction_count,5.7;8.0,0,,ops,Shows the number of ongoing transactions which have been marked as anonymous. This can be used to ensure that no further transactions are waiting to be processed
+STATUS,gauge,Open_files,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2863,,ops,"The number of files that are open. This count includes regular files opened by the server. It does not include other types of files such as sockets or pipes. Also, the count does not include files that storage engines open using their own internal functions rather than asking the server level to do so"
+STATUS,gauge,Open_streams,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,ops,The number of streams that are open (used mainly for logging).
+STATUS,gauge,Open_table_definitions,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2318,,ops,The number of cached table definitions
+STATUS,gauge,Open_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2500,,ops,The number of tables that are open.
+STATUS,gauge,Performance_schema_session_connect_attrs_longest_seen,8,146,,,
+STATUS,gauge,Prepared_stmt_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,max_prepared_statement_count,statements,The current number of prepared statements. 
+STATUS,gauge,Qcache_free_blocks,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,18014,,,
+STATUS,gauge,Qcache_free_memory,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,44995688,,,
+STATUS,gauge,Qcache_queries_in_cache,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,39964,,,
+STATUS,gauge,Qcache_total_blocks,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,119008,,,
+STATUS,gauge,Replica_open_temp_tables,8,0,,,
+STATUS,gauge,Resultset_metadata_skipped,10.6,0,,,
+STATUS,gauge,Rpl_semi_sync_master_clients,10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Rpl_semi_sync_master_get_ack,10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Rpl_semi_sync_master_net_avg_wait_time,10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Rpl_semi_sync_master_request_ack,10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Rpl_semi_sync_master_status,10.3;10.4;10.5;10.6,OFF,,,
+STATUS,gauge,Rpl_semi_sync_master_tx_avg_wait_time,10.3;10.4;10.5;10.6,0,,,
+STATUS,counter,Rpl_semi_sync_master_wait_sessions,10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Rpl_semi_sync_slave_status,10.3;10.4;10.5;10.6,OFF,,,
+STATUS,setting,Rpl_status,5.5;10.1;10.2;10.3;10.4;10.5;10.6,AUTH_MASTER,,,
+STATUS,setting,Rsa_public_key,5.6;5.7;8.0,X.509 public key,,,
+STATUS,counter,Secondary_engine_execution_count,8,0,,,
+STATUS,setting,Slave_heartbeat_period,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Slave_last_heartbeat,5.6;5.7,,,,
+STATUS,gauge,Slave_open_temp_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Slave_received_heartbeats,5.6;5.7,0,,,
+STATUS,gauge,Slave_retried_transactions,5.6;5.7,0,,,
+STATUS,setting,Slave_running,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+STATUS,gauge,Slaves_connected,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Slaves_running,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_cipher,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,Ssl_cipher_list,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,Ssl_ctx_verify_depth,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_ctx_verify_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_default_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Ssl_finished_connects,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_server_not_after,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,Ssl_server_not_before,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,Ssl_session_cache_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,NONE,,,
+STATUS,gauge,Ssl_session_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_verify_depth,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_verify_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Ssl_version,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,counter,Subquery_cache_hit,10.1;10.2;10.3;10.4;10.5;10.6,55265694,,,
+STATUS,counter,Subquery_cache_miss,10.1;10.2;10.3;10.4;10.5;10.6,61655196,,,
+STATUS,gauge,Tc_log_max_pages_used,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,Tc_log_page_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4096,,,
+STATUS,gauge,Threadpool_idle_threads,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Threadpool_threads,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,Threads_cached,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,234,,,
+STATUS,gauge,Threads_connected,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,25,,,
+STATUS,gauge,Threads_running,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+STATUS,state,wsrep,10.4;10.5;10.6,0,,,
+STATUS,gauge,wsrep_applier_thread_count,10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,setting,wsrep_cluster_capabilities,10.4;10.5;10.6,,,,
+STATUS,gauge,wsrep_cluster_conf_id,10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+STATUS,gauge,wsrep_cluster_size,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,state,wsrep_cluster_state_uuid,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,state,wsrep_cluster_status,10.1;10.2;10.3;10.4;10.5;10.6,Disconnected,,,
+STATUS,setting,wsrep_connected,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+STATUS,gauge,wsrep_local_bf_aborts,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,state,wsrep_local_index,10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+STATUS,setting,wsrep_provider_capabilities,10.4;10.5;10.6,,,,
+STATUS,setting,wsrep_provider_name,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,wsrep_provider_vendor,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,settgin,wsrep_provider_version,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+STATUS,setting,wsrep_ready,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+STATUS,gauge,wsrep_rollbacker_thread_count,10.2;10.3;10.4;10.5;10.6,0,,,
+STATUS,gauge,wsrep_thread_count,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,activate_all_roles_on_login,8,OFF,,,
+VARS,,admin_address,8,,,,
+VARS,,admin_port,8,33062,,,
+VARS,,admin_ssl_ca,8,,,,
+VARS,,admin_ssl_capath,8,,,,
+VARS,,admin_ssl_cert,8,,,,
+VARS,,admin_ssl_cipher,8,,,,
+VARS,,admin_ssl_crl,8,,,,
+VARS,,admin_ssl_crlpath,8,,,,
+VARS,,admin_ssl_key,8,,,,
+VARS,,admin_tls_ciphersuites,8,,,,
+VARS,,admin_tls_version,8,"TLSv1,TLSv1.1,TLSv1.2,TLSv1.3",,,
+VARS,,alter_algorithm,10.3;10.4;10.5;10.6,DEFAULT,,,
+VARS,,analyze_sample_percentage,10.4;10.5;10.6,100,,percentage,Percentage of rows from the table ANALYZE TABLE will sample to collect table statistics. Set to 0 to let MariaDB decide what percentage of rows to sample.
+VARS,,aria_block_size,10.1;10.2;10.3;10.4;10.5;10.6,8192,,bytes,Block size for Aria index pages.
+VARS,,aria_checkpoint_interval,10.1;10.2;10.3;10.4;10.5;10.6,30,,seconds,Interval in seconds between automatic checkpoints.
+VARS,,aria_checkpoint_log_activity,10.1;10.2;10.3;10.4;10.5;10.6,1048576,,bytes,Number of bytes that the transaction log has to grow between checkpoints before a new checkpoint is written to the log
+VARS,setting,aria_encrypt_tables,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,aria_force_start_after_recovery_failures,10.1;10.2;10.3;10.4;10.5;10.6,0,,number,Number of consecutive log recovery failures after which logs will be automatically deleted to cure the problem; 0 (the default) disables the feature
+VARS,,aria_group_commit,10.1;10.2;10.3;10.4;10.5;10.6,none,,text,Specifies Aria group commit mode  none / hard / soft 
+VARS,,aria_group_commit_interval,10.1;10.2;10.3;10.4;10.5;10.6,0,aria_group_commit,microseconds,Interval between Aria group commits in microseconds
+VARS,,aria_log_file_size,10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,bytes,Limit for Aria transaction log size
+VARS,,aria_log_purge_type,10.1;10.2;10.3;10.4;10.5;10.6,immediate,,,
+VARS,,aria_max_sort_file_size,10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,aria_page_checksum,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,aria_pagecache_age_threshold,10.1;10.2;10.3;10.4;10.5;10.6,300,,,
+VARS,,aria_pagecache_buffer_size,10.1;10.2;10.3;10.4;10.5;10.6,134217728,,,
+VARS,,aria_pagecache_division_limit,10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,aria_pagecache_file_hash_size,10.1;10.2;10.3;10.4;10.5;10.6,512,,,
+VARS,,aria_recover,10.1,NORMAL,,,
+VARS,,aria_recover_options,10.2;10.3;10.4;10.5;10.6,"BACKUP,QUICK",,,
+VARS,,aria_repair_threads,10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,aria_sort_buffer_size,10.1;10.2;10.3;10.4;10.5;10.6,268434432,,,
+VARS,,aria_stats_method,10.1;10.2;10.3;10.4;10.5;10.6,nulls_unequal,,,
+VARS,,aria_sync_log_dir,10.1;10.2;10.3;10.4;10.5;10.6,NEWFILE,,,
+VARS,,aria_used_for_temp_tables,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,auto_generate_certs,5.7;8.0,ON,,,
+VARS,setting,auto_increment_increment,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,Current increment to identity numbers
+VARS,,auto_increment_offset,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,Current starting point for identity numbers
+VARS,,autocommit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,
+VARS,,automatic_sp_privileges,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,avoid_temporal_upgrade,5.6;5.7;8.0,OFF,,,
+VARS,,back_log,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,450,,,
+VARS,,basedir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/usr/,,,
+VARS,,big_tables,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,bind_address,5.6;5.7;8.0;10.3;10.4;10.5;10.6,*,,,
+VARS,,binlog_annotate_row_events,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,binlog_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32768,,bytes,
+VARS,,binlog_checksum,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,CRC32,,text,Enabling this option causes the source to write checksums for events written to the binary log CRC32 / NONE
+VARS,,binlog_commit_wait_count,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,binlog_commit_wait_usec,10.1;10.2;10.3;10.4;10.5;10.6,100000,,,
+VARS,,binlog_direct_non_transactional_updates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,binlog_encryption,8,OFF,,,
+VARS,,binlog_error_action,5.6;5.7;8.0,ABORT_SERVER,,,
+VARS,,binlog_expire_logs_seconds,8.0;10.6,2592000,,,
+VARS,,binlog_file_cache_size,10.3;10.4;10.5;10.6,16384,,,
+VARS,,binlog_format,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,MIXED,,,
+VARS,,binlog_group_commit_sync_delay,5.7;8.0,0,,,
+VARS,,binlog_group_commit_sync_no_delay_count,5.7;8.0,0,,,
+VARS,,binlog_gtid_simple_recovery,5.6;5.7;8.0,ON,,,
+VARS,,binlog_max_flush_queue_time,5.6;5.7;8.0,0,,,
+VARS,,binlog_optimize_thread_scheduling,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,binlog_order_commits,5.6;5.7;8.0,ON,,,
+VARS,,binlog_rotate_encryption_master_key_at_startup,8,OFF,,,
+VARS,,binlog_row_event_max_size,8,8192,,bytes,maximum size of a row-based binary log event
+VARS,,binlog_row_image,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,FULL,,,
+VARS,,binlog_row_metadata,8.0;10.5;10.6,NO_LOG,,,
+VARS,,binlog_row_value_options,8,,,,
+VARS,,binlog_rows_query_log_events,5.6;5.7;8.0,OFF,,,
+VARS,,binlog_skip_flush_commands,5.7,OFF,,,
+VARS,,binlog_space_limit,5.7,0,,,
+VARS,,binlog_stmt_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32768,,,
+VARS,,binlog_transaction_compression,8,OFF,,,
+VARS,,binlog_transaction_compression_level_zstd,8,3,,,
+VARS,,binlog_transaction_dependency_history_size,5.7;8.0,25000,,,
+VARS,,binlog_transaction_dependency_tracking,5.7;8.0,COMMIT_ORDER,,,
+VARS,,binlogging_impossible_mode,5.6,IGNORE_ERROR,,,
+VARS,,block_encryption_mode,5.6;5.7;8.0,aes-128-ecb,,,
+VARS,,bulk_insert_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,8388608,,,
+VARS,,caching_sha2_password_auto_generate_rsa_keys,8,ON,,,
+VARS,,caching_sha2_password_digest_rounds,8,5000,,,
+VARS,,caching_sha2_password_private_key_path,8,private_key.pem,,,
+VARS,,caching_sha2_password_public_key_path,8,public_key.pem,,,
+VARS,,character_set_client,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8mb4,,character set,
+VARS,,character_set_connection,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8mb4,,character set,
+VARS,,character_set_database,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8,,character set,
+VARS,,character_set_filesystem,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,binary,,character set,
+VARS,,character_set_results,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8mb4,,character set,
+VARS,,character_set_server,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8,,character set,
+VARS,,character_set_system,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8,,character set,
+VARS,,character_sets_dir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/usr/share/mysql/charsets/,,path,
+VARS,,check_constraint_checks,10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,
+VARS,,check_proxy_users,5.7;8.0,OFF,,ONOFF,
+VARS,,collation_connection,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8mb4_unicode_ci,,collation,
+VARS,,collation_database,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8_general_ci,,collation,
+VARS,,collation_server,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,utf8_general_ci,,collation,
+VARS,,column_compression_threshold,10.3;10.4;10.5;10.6,100,,,
+VARS,,column_compression_zlib_level,10.3;10.4;10.5;10.6,6,,,
+VARS,,column_compression_zlib_strategy,10.3;10.4;10.5;10.6,DEFAULT_STRATEGY,,text,
+VARS,,column_compression_zlib_wrap,10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,completion_type,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,NO_CHAIN,,text,
+VARS,,concurrent_insert,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,AUTO,,AUTO,
+VARS,,connect_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,,
+VARS,,core_file,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,create_admin_listener_thread,8,OFF,,ONOFF,
+VARS,,csv_mode,5.7,,,,
+VARS,,cte_max_recursion_depth,8,1000,,number,
+VARS,,datadir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/var/lib/mysql/,,path,
+VARS,,date_format,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,%Y-%m-%d,,date format,
+VARS,,datetime_format,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,%Y-%m-%d %H:%i:%s,,date format,
+VARS,,deadlock_search_depth_long,10.1;10.2;10.3;10.4;10.5;10.6,15,,number,
+VARS,,deadlock_search_depth_short,10.1;10.2;10.3;10.4;10.5;10.6,4,,number,
+VARS,,deadlock_timeout_long,10.1;10.2;10.3;10.4;10.5;10.6,50000000,,,
+VARS,,deadlock_timeout_short,10.1;10.2;10.3;10.4;10.5;10.6,10000,,,
+VARS,,debug_no_thread_alarm,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,default_authentication_plugin,5.7;8.0,mysql_native_password,,text,
+VARS,,default_collation_for_utf8mb4,8,utf8mb4_0900_ai_ci,,collation,
+VARS,,default_master_connection,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,default_password_lifetime,5.7;8.0;10.4;10.5;10.6,0,,,
+VARS,,default_regex_flags,10.1;10.2;10.3;10.4;10.5;10.6,,,text,
+VARS,,default_storage_engine,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,MyISAM,,text,
+VARS,,default_table_encryption,8,OFF,,ONOFF,
+VARS,,default_tmp_storage_engine,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,text,
+VARS,,default_week_format,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,delay_key_write,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,"ON/OFF/ALL Specifies how MyISAM tables handles CREATE TABLE DELAY_KEY_WRITE. If set to ON, the default, any DELAY KEY WRITEs are honored. The key buffer is then flushed only when the table closes, speeding up writes"
+VARS,,delayed_insert_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,delayed_insert_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,300,,,
+VARS,,delayed_queue_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1000,,,
+VARS,,disabled_storage_engines,5.7;8.0,,,text,
+VARS,,disconnect_on_expired_password,5.6;5.7;8.0;10.4;10.5;10.6,ON,,ONOFF,
+VARS,,div_precision_increment,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,,
+VARS,,encrypt_binlog,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,encrypt_tmp_disk_tables,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,encrypt_tmp_files,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,end_markers_in_json,5.6;5.7;8.0,OFF,,ONOFF,
+VARS,,enforce_gtid_consistency,5.6;5.7;8.0,OFF,,ONOFF,
+VARS,,enforce_storage_engine,5.7;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,engine_condition_pushdown,5.5,ON,,ONOFF,
+VARS,,eq_range_index_dive_limit,5.6;5.7;8.0;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,error_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,event_scheduler,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,expand_fast_index_creation,5.7,OFF,,ONOFF,
+VARS,,expensive_subquery_limit,10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,expire_logs_days,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,explicit_defaults_for_timestamp,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,external_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,extra_max_connections,5.7;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,extra_port,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,flush,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,flush_time,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,foreign_key_checks,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,ft_boolean_syntax,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,"+ -><()~*:""""&|",,text,
+VARS,,ft_max_word_len,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,84,,number,
+VARS,,ft_min_word_len,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,number,
+VARS,,ft_query_expansion_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20,,number,
+VARS,,ft_query_extra_word_chars,5.7,OFF,,ONOFF,
+VARS,,ft_stopword_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,(built-in),,path,
+VARS,,general_log,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,general_log_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,cp17.log,,filename,
+VARS,,generated_random_password_length,8,20,,number,
+VARS,,group_concat_max_len,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1048576,,bytes,
+VARS,,group_replication_consistency,8,EVENTUAL,,,
+VARS,,gtid_binlog_pos,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,gtid_binlog_state,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,gtid_cleanup_batch_size,10.4;10.5;10.6,64,,,
+VARS,,gtid_current_pos,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,gtid_domain_id,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,gtid_executed,5.6;5.7;8.0,,,,
+VARS,,gtid_executed_compression_period,5.7;8.0,1000,,,
+VARS,,gtid_ignore_duplicates,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,gtid_mode,5.6;5.7;8.0,OFF,,,
+VARS,,gtid_next,5.6;5.7;8.0,AUTOMATIC,,,
+VARS,,gtid_owned,5.6;5.7;8.0,,,,
+VARS,,gtid_pos_auto_engines,10.3;10.4;10.5;10.6,,,,
+VARS,,gtid_purged,5.6;5.7;8.0,,,,
+VARS,,gtid_seq_no,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,gtid_slave_pos,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,gtid_strict_mode,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,setting,have_backup_locks,5.7,YES,,YESNO,Feature
+VARS,setting,have_backup_safe_binlog_info,5.7,YES,,YESNO,
+VARS,setting,have_compress,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_crypt,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_csv,5.5,YES,,YESNO,
+VARS,setting,have_dynamic_loading,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_geometry,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_innodb,5.5,YES,,YESNO,
+VARS,setting,have_ndbcluster,5.5,NO,,YESNO,
+VARS,setting,have_openssl,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_partitioning,5.5,YES,,YESNO,
+VARS,setting,have_profiling,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_query_cache,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_rtree_keys,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,YESNO,
+VARS,setting,have_snapshot_cloning,5.7,YES,,YESNO,
+VARS,setting,have_ssl,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,DISABLED,,YESDISABLEDNO,
+VARS,setting,have_statement_timeout,5.7;8.0,YES,,YESNO,
+VARS,setting,have_symlink,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,DISABLED,,YESDISABLEDNO,
+VARS,,histogram_generation_max_mem_size,8,20000000,,bytes,
+VARS,,histogram_size,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,histogram_type,10.1;10.2;10.3;10.4;10.5;10.6,SINGLE_PREC_HB,,text,
+VARS,,host_cache_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,703,,number,Available entries in host cache
+VARS,,hostname,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,"Redacted, not localhost",,text,Server machine's hostname
+VARS,,identity,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,last_insert_id,number,LAST_INSERT_ID() value
+VARS,,idle_readonly_transaction_timeout,10.3;10.4;10.5;10.6,0,,,
+VARS,,idle_transaction_timeout,10.3;10.4;10.5;10.6,0,,,
+VARS,,idle_write_transaction_timeout,10.3;10.4;10.5;10.6,0,,,
+VARS,,ignore_builtin_innodb,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,"Setting this to 1 results in the built-in InnoDB storage engine being ignored. In some versions of MariaDB, XtraDB is the default and is always present, so this variable is ignored and setting it results in a warning."
+VARS,,ignore_db_dirs,5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,immediate_server_version,8,999999,,,
+VARS,,in_predicate_conversion_threshold,10.3;10.4;10.5;10.6,1000,,,
+VARS,,in_transaction,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,information_schema_stats_expiry,8,86400,,,
+VARS,,init_connect,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,init_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,init_replica,8,,,,
+VARS,,init_slave,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_adaptive_flushing,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,"If set to 1, the default, the server will dynamically adjust the flush rate of dirty pages in the InnoDB buffer pool. This assists to reduce brief bursts of I/O activity. If set to 0, adaptive flushing will only take place when the limit specified by innodb_adaptive_flushing_lwm is reached"
+VARS,,innodb_adaptive_flushing_lwm,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,ONOFF, Adaptive flushing is enabled when this low water mark percentage of the InnoDB redo log capacity is reached. Takes effect even if innodb_adaptive_flushing is disabled
+VARS,,innodb_adaptive_hash_index,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,"If set to 1, the default until MariaDB 10.5, the InnoDB hash index is enabled. Based on performance testing (MDEV-17492), the InnoDB adaptive hash index helps performance in mostly read-only workloads, and could slow down performance in other environments, especially DROP TABLE, TRUNCATE TABLE, ALTER TABLE, or DROP INDEX operations"
+VARS,,innodb_adaptive_hash_index_partitions,10.1;10.2,8,,ONOFF,"Specifies the number of partitions for use in adaptive searching. If set to 1, no extra partitions are created. XtraDB-only. From MariaDB 10.2.6 (which uses InnoDB as default instead of XtraDB), this is an alias for innodb_adaptive_hash_index_parts to allow for easier upgrades"
+VARS,,innodb_adaptive_hash_index_parts,5.7;8.0;10.2;10.3;10.4;10.5;10.6,8,,ONOFF,"Specifies the number of partitions for use in adaptive searching. If set to 1, no extra partitions are created."
+VARS,,innodb_adaptive_max_sleep_delay,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,150000,innodb_thread_sleep_delay,microseconds," Maximum time in microseconds to automatically adjust the innodb_thread_sleep_delay value to, based on the workload. Useful in extremely busy systems with hundreds of thousands of simultaneous connections. 0 disables any limit. Deprecated and ignored from MariaDB 10.5.5"
+VARS,,innodb_additional_mem_pool_size,5.5;5.6;10.1,8388608,,bytes,"Size of the InnoDB memory pool used for storing information about internal data structures. Defaults to 8MB, if your application has many tables and a large structure, and this is exceeded, operating system memory will be allocated and warning messages written to the error log, in which case you should increase this value. Deprecated in MariaDB 10.0 and removed"
+VARS,,innodb_api_bk_commit_interval,5.6;5.7;8.0;10.1,5,,seconds, Time in seconds between auto-commits for idle connections using the InnoDB memcached interface
+VARS,,innodb_api_disable_rowlock,5.6;5.7;8.0;10.1,OFF,,ONOFF,For use with MySQL's memcached
+VARS,,innodb_api_enable_binlog,5.6;5.7;8.0;10.1,OFF,,ONOFF,For use with MySQL's memcached
+VARS,,innodb_api_enable_mdl,5.6;5.7;8.0;10.1,OFF,,ONOFF,For use with MySQL's memcached
+VARS,,innodb_api_trx_level,5.6;5.7;8.0;10.1,0,,,For use with MySQL's memcached
+VARS,,innodb_autoextend_increment,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,64,,MiB,"Size to increment an auto-extending shared tablespace file when it becomes full. If innodb_file_per_table was set to 1, this setting does not apply to the resulting per-table tablespace files, which are automatically extended in their own way."
+VARS,,innodb_autoinc_lock_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,The lock mode that is used when generating AUTO_INCREMENT values for InnoDB tables. 0:traditional 1:consecutive 2:interleaved. Galera Cluster requires 2.
+VARS,,innodb_background_scrub_data_check_interval,5.7;10.1;10.2;10.3;10.4;10.5,3600,,seconds,How often to check if spaces need scrubbing to overwrite deleted data
+VARS,,innodb_background_scrub_data_compressed,5.7;10.1;10.2;10.3;10.4;10.5,OFF,,ONOFF,Enable scrubbing of compressed data by background threads
+VARS,,innodb_background_scrub_data_interval,5.7;10.1;10.2;10.3;10.4;10.5,604800,,seconds,Scrub spaces that were last scrubbed longer than this many seconds ago.
+VARS,,innodb_background_scrub_data_uncompressed,5.7;10.1;10.2;10.3;10.4;10.5,OFF,,ONOFF,Enable scrubbing of uncompressed data by background threads
+VARS,,innodb_buf_dump_status_frequency,10.1;10.2;10.3;10.4;10.5;10.6,0,,percent,"Determines how often the buffer pool dump status should be printed in the logs. For example, 10 means that the buffer pool dump status is printed when every 10% of the number of buffer pool pages are dumped. The default is 0 (only start and end status is printed)"
+VARS,,innodb_buffer_pool_chunk_size,5.7;8.0;10.2;10.3;10.4;10.5;10.6,134217728,large_page_size,bytes,Chunk size used for dynamically resizing the buffer pool. Note that changing this setting can change the size of the buffer pool. When large-pages is used this value is effectively rounded up to the next multiple of large-page-size.
+VARS,,innodb_buffer_pool_dump_at_shutdown,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,innodb_buffer_pool_load_at_startup,ONOFF,"Whether to record pages cached in the buffer pool on server shutdown, which reduces the length of the warmup the next time the server starts"
+VARS,,innodb_buffer_pool_dump_now,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,innodb_buffer_pool_load_now,ONOFF,Immediately records pages stored in the buffer pool. 
+VARS,,innodb_buffer_pool_dump_pct,5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,25,,percent,"Dump only the hottest N% of each buffer pool, "
+VARS,,innodb_buffer_pool_filename,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ib_buffer_pool,,filename,The file that holds the buffer pool list of page numbers set by innodb_buffer_pool_dump_at_shutdown and innodb_buffer_pool_dump_now
+VARS,,innodb_buffer_pool_in_core_file,5.7;8.0,ON,,ONOFF,
+VARS,,innodb_buffer_pool_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,10,,number,"If innodb_buffer_pool_size is set to more than 1GB, innodb_buffer_pool_instances divides the InnoDB buffer pool into this many instances."
+VARS,,innodb_buffer_pool_load_abort,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Aborts the process of restoring buffer pool contents started by innodb_buffer_pool_load_at_startup or innodb_buffer_pool_load_now
+VARS,,innodb_buffer_pool_load_at_startup,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,innodb_buffer_pool_dump_at_shutdown,ONOFF,Specifies whether the buffer pool is automatically warmed up when the server starts by loading the pages held earlier. 
+VARS,,innodb_buffer_pool_load_now,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Immediately warms up the buffer pool by loading the stored data pages
+VARS,,innodb_buffer_pool_populate,10.1;10.2,OFF,,ONOFF,Preallocate pages in the buffer pool on starting up 
+VARS,important,innodb_buffer_pool_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10737418240,,bytes,"InnoDB buffer pool size. The primary value to adjust. On a dedicated server with entirely/primarily InnoDB tables, can be set up to 80% of total RAM."
+VARS,,innodb_change_buffer_max_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,25,,percent,"Maximum size of the InnoDB Change Buffer (f/k/a Insert Buffer) as a percentage of the total buffer pool. The default is 25%, and this can be increased up to 50% for servers with high write activity, and lowered down to 0 for servers used exclusively for reporting"
+VARS,,innodb_change_buffering,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,all,,text,Sets how InnoDB change buffering is performed. Inserts / none / deletes / purges / changes / all
+VARS,,innodb_checksum_algorithm,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,crc32,,text,Specifies how the InnoDB tablespace checksum is generated and verified. crc32  full_crc32 / strict_full_crc32 / none / strict_innodb / strict_none
+VARS,,innodb_checksums,5.5;5.6;5.7;10.1;10.2;10.3;10.4,ON,innodb_checksum_algorithm,ONOFF,"Perform checksum validation on all pages read from disk, which provides extra fault tolerance."
+VARS,,innodb_cleaner_lsn_age_factor,5.7;10.1;10.2,DEPRECATED,,text,XtraDB only.  Aggressive last sequence number (LSN) aging. high_checkpoint / legacy 
+VARS,,innodb_cmp_per_index_enabled,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Store per-index compression statistics in INFORMATION_SCHEMA.INNODB_CMP_PER_INDEX table. Expensive when ON.
+VARS,,innodb_commit_concurrency,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,0,,number,Limit to the number of transaction threads that can can commit simultaneously. 0=no limit.
+VARS,,innodb_compressed_columns_threshold,5.7,96,,,
+VARS,,innodb_compressed_columns_zip_level,5.7,6,,,
+VARS,,innodb_compression_algorithm,10.1;10.2;10.3;10.4;10.5;10.6,zlib,,text,Algorithm for page compression.  none / zlib / lz4 / lzo / lzma / bzip2 / snappy 
+VARS,,innodb_compression_default,10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Compression enabled by default for new tables
+VARS,,innodb_compression_failure_threshold_pct,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5,innodb_compression_pad_pct_max,percent,Cutoff for expensive compression failures during updates.  0=none
+VARS,,innodb_compression_level,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6,,number,Compression level
+VARS,,innodb_compression_pad_pct_max,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,percent,Maximum reserved free space in each compressed page.  Reserved free space is used when the page's data is reorganized and might be recompressed.
+VARS,,innodb_concurrency_tickets,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,5000,,number,Number of times a newly-entered thread can enter and leave InnoDB until it is again subject to the limitations of innodb_thread_concurrency and may possibly be queued.
+VARS,,innodb_corrupt_table_action,5.7;10.1;10.2,deprecated,,text,XtraDB only. Assert / warn / salvage
+VARS,,innodb_data_file_path,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ibdata1:12M:autoextend,,filename,"Individual InnoDB data files, paths and sizes. The value of innodb_data_home_dir is joined to each path specified by innodb_data_file_path to get the full directory path. If innodb_data_home_dir is an empty string, absolute paths can be specified here. A file size is specified with K for kilobytes, M for megabytes and G for gigabytes, and whether or not to autoextend the data file is also specified"
+VARS,,innodb_data_home_dir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,path,Directory path for all InnoDB data files in the shared tablespace 
+VARS,,innodb_deadlock_detect,5.7;8.0;10.2;10.3;10.4;10.5;10.6,ON,innodb_lock_wait_timeout,ONOFF," If set to off, deadlock detection is disabled and MariaDB will rely on innodb_lock_wait_timeout instead."
+VARS,,innodb_deadlock_report,10.6,full,,text,Deadlock report detail: off / basic / full
+VARS,,innodb_dedicated_server,8,OFF,,ONOFF,InnoDB automatically configures buffer pool and log file settings at startup
+VARS,,innodb_default_encryption_key_id,5.7;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,innodb_default_row_format,5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,dynamic,,text,dynamic / compact / redundant
+VARS,,innodb_defragment,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,innodb_defragment_fill_factor,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,innodb_defragment_fill_factor_n_recs,10.1;10.2;10.3;10.4;10.5;10.6,20,,,
+VARS,,innodb_defragment_frequency,10.1;10.2;10.3;10.4;10.5;10.6,40,,,
+VARS,,innodb_defragment_n_pages,10.1;10.2;10.3;10.4;10.5;10.6,7,,,
+VARS,,innodb_defragment_stats_accuracy,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,innodb_directories,8,,,text,List of directories separated by semicolons
+VARS,,innodb_disable_sort_file_cache,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Disables the operating system file system cache for merge-sort temporary files. The effect is to open such files with the equivalent of O_DIRECT.
+VARS,,innodb_disallow_writes,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_doublewrite,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,Dublewrite buffer feature enabled
+VARS,,innodb_doublewrite_batch_size,8,0,,pages,Number of doublewrite pages to write in a batch
+VARS,,innodb_doublewrite_dir,8,,,path,Directory for doublewrite files
+VARS,,innodb_doublewrite_files,8,2,,number,"Number of doublewrite files. By default, two doublewrite files are created for each buffer pool instance"
+VARS,,innodb_doublewrite_pages,8,4,innodb_write_io_threads ,number,"Maximum number of doublewrite pages per thread for a batch write. If no value is specified, set to the innodb_write_io_threads value"
+VARS,,innodb_empty_free_list_algorithm,5.7;10.1;10.2,DEPRECATED,,,
+VARS,,innodb_encrypt_log,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_encrypt_online_alter_logs,5.7,OFF,,,
+VARS,,innodb_encrypt_tables,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_encrypt_temporary_tables,10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_encryption_rotate_key_age,5.7;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,innodb_encryption_rotation_iops,5.7;10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,innodb_encryption_threads,5.7;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,innodb_extend_and_initialize,8,ON,,,
+VARS,,innodb_fake_changes,10.1;10.2,OFF,,,
+VARS,,innodb_fast_shutdown,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,0: purge and change-buffer merge. 1:skip those steps. 2:crash the program
+VARS,,innodb_fatal_semaphore_wait_threshold,10.1;10.2;10.3;10.4;10.5;10.6,600,,,
+VARS,,innodb_file_format,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5,Barracuda,,,
+VARS,,innodb_file_format_check,5.5;5.6;5.7;10.1;10.2,ON,,,
+VARS,,innodb_file_format_max,5.5;5.6;5.7;10.1;10.2,Barracuda,,,
+VARS,,innodb_file_per_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,"When ON, tables are created in file-per-table tablespaces by default."
+VARS,,innodb_fill_factor,5.7;8.0;10.2;10.3;10.4;10.5;10.6,100,,percent,Space to fill in clustered index pages.  Never more than 94%.
+VARS,,innodb_flush_log_at_timeout,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,seconds,Write and flush the logs every N seconds
+VARS,,innodb_flush_log_at_trx_commit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,"1: ACID.  0: Once per second.  2: logs written on commit, flushed once per second"
+VARS,,innodb_flush_method,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,text,See https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_method
+VARS,,innodb_flush_neighbors,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,number,"0,1,2: Set to 0 on SSDs."
+VARS,,innodb_flush_sync,5.7;8.0;10.2;10.3;10.4;10.5;10.6,ON,innodb_io_capacity,ONOFF,Causes the innodb_io_capacity setting to be ignored during bursts of I/O activity that occur at checkpoints
+VARS,,innodb_flushing_avg_loops,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,30,,number,"Increasing the value makes the rate of flush operations change smoothly and gradually as the workload changes. Decreasing the value makes adaptive flushing adjust quickly to workload changes, which can cause spikes in flushing activity if the workload increases and decreases suddenly"
+VARS,,innodb_force_index_records_in_range,5.7,0,,,
+VARS,,innodb_force_load_corrupted,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,"Permits InnoDB to load tables at startup that are marked as corrupted. Use only during troubleshooting, to recover data that is otherwise inaccessible"
+VARS,,innodb_force_primary_key,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_force_recovery,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,number,1-6. See https://dev.mysql.com/doc/refman/8.0/en/forcing-innodb-recovery.html
+VARS,,innodb_foreground_preflush,10.1;10.2,DEPRECATED,,,
+VARS,,innodb_fsync_threshold,8,0,,bytes,See https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_fsync_threshold
+VARS,,innodb_ft_aux_table,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,tablename,
+VARS,,innodb_ft_cache_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,8000000,,bytes,Cache size for document in memory while creating an InnoDB FULLTEXT index
+VARS,,innodb_ft_enable_diag_print,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_ft_enable_stopword,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_ft_ignore_stopwords,5.7,OFF,,,
+VARS,,innodb_ft_max_token_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,84,,,
+VARS,,innodb_ft_min_token_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3,,,
+VARS,,innodb_ft_num_word_optimize,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2000,,number,Words to process during each OPTIMIZE run
+VARS,,innodb_ft_result_cache_limit,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2000000000,,bytes,
+VARS,,innodb_ft_server_stopword_table,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,tablename,
+VARS,,innodb_ft_sort_pll_degree,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2,,number,Threads used for tokenizing and indexing full text
+VARS,,innodb_ft_total_cache_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,640000000,,bytes,Total FULLTEXT cache size
+VARS,,innodb_ft_user_stopword_table,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,tablename,
+VARS,,innodb_idle_flush_pct,8.0;10.1;10.2;10.3;10.4;10.5,100,innodb_io_capacity,percent,Limits page flushing when InnoDB is idle. A percentage of innodb_io_capacity.
+VARS,,innodb_immediate_scrub_data_uncompressed,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Enable scrubbing of uncompressed data to overwrite deleted data
+VARS,,innodb_instant_alter_column_allowed,10.3;10.4;10.5;10.6,add_last,,,
+VARS,,innodb_instrument_semaphores,10.1;10.2,OFF,,,
+VARS,,innodb_io_capacity,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,200,,ops/second,"IOPS available to InnoDB background tasks, such as flushing pages from the buffer pool and merging data from the change buffer"
+VARS,,innodb_io_capacity_max,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2000,,ops/second,"Max IOPS available to InnoDB background tasks, such as flushing pages from the buffer pool and merging data from the change buffer"
+VARS,,innodb_kill_idle_transaction,5.7;10.1;10.2,0,,,
+VARS,,innodb_large_prefix,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5,ON,,,
+VARS,,innodb_lock_schedule_algorithm,10.1;10.2;10.3;10.4;10.5,fcfs,,,
+VARS,,innodb_lock_wait_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,seconds,Max wait time for a row lock before rollback and 1205 error
+VARS,,innodb_locking_fake_changes,10.1;10.2,OFF,,,
+VARS,,innodb_locks_unsafe_for_binlog,5.5;5.6;5.7;10.1;10.2;10.3;10.4,OFF,,,
+VARS,,innodb_log_arch_dir,10.1;10.2,,,,
+VARS,,innodb_log_arch_expire_sec,10.1;10.2,0,,,
+VARS,,innodb_log_archive,10.1;10.2,OFF,,,
+VARS,,innodb_log_block_size,10.1;10.2,0,,,
+VARS,,innodb_log_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16777216,,bytes,Size of log file buffers.
+VARS,,innodb_log_checksum_algorithm,10.1;10.2,DEPRECATED,,,
+VARS,,innodb_log_checksums,5.7;8.0;10.2;10.3;10.4;10.5,ON,,ONOFF,Use checksums on redo log pages
+VARS,,innodb_log_compressed_pages,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,ON,,ONOFF,Re-compressed pages are written to the redo log. Re-compression may occur when changes are made to compressed data
+VARS,,innodb_log_file_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,bytes,Size of each file in a log group
+VARS,,innodb_log_files_in_group,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,2,,number,Number of files in the log group
+VARS,,innodb_log_group_home_dir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,./,,path,
+VARS,,innodb_log_optimize_ddl,10.2;10.3;10.4;10.5,OFF,,,
+VARS,,innodb_log_spin_cpu_abs_lwm,8,80,,percent,CPU core usage below which user threads no longer spin while waiting for flushed redo. (can be > 100 on multicore systems)
+VARS,,innodb_log_spin_cpu_pct_hwm,8,50,,percent,CPU core usage above which user threads no longer spin while waiting for flushed redo. (can be > 100 on multicore systems)
+VARS,,innodb_log_wait_for_flush_spin_hwm,8,400,,microseconds,Maximum average log flush time beyond which user threads no longer spin while waiting for flushed redo. 
+VARS,,innodb_log_write_ahead_size,5.7;8.0;10.2;10.3;10.4;10.5;10.6,8192,,bytes,Write-ahead block size for the redo log. Even multiples of both filesystem and log fle block size.
+VARS,,innodb_log_writer_threads,8,ON,,ONOFF,"Enables dedicated log writer threads for writing redo log records from the log buffer to the system buffers and flushing the system buffers to the redo log files. Dedicated log writer threads can improve performance on high-concurrency systems, but for low-concurrency systems, disabling dedicated log writer threads provides better performance."
+VARS,,innodb_lru_flush_size,10.5;10.6,32,,,
+VARS,,innodb_lru_scan_depth,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,number,See https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth
+VARS,,innodb_max_bitmap_file_size,5.7;10.1;10.2,0,,,
+VARS,,innodb_max_changed_pages,5.7;10.1;10.2,0,,,
+VARS,,innodb_max_dirty_pages_pct,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,75,,percent,InnoDB tries to flush data from the buffer pool so that the percentage of dirty pages does not exceed this value.
+VARS,,innodb_max_dirty_pages_pct_lwm,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,innodb_max_dirty_pages_pct,percent,Preflushing dirty page percentage. 0: disabled.  Must be lower than innodb_max_dirty_pages_pct
+VARS,,innodb_max_purge_lag,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,innodb_max_purge_lag_delay,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,microseconds,
+VARS,,innodb_max_purge_lag_wait,10.2;10.3;10.4;10.5;10.6,4294967295,,microseconds,
+VARS,,innodb_max_undo_log_size,5.7;8.0;10.2;10.3;10.4;10.5;10.6,10485760,,bytes,"If an undo tablespace exceeds the threshold, it can be marked for truncation when innodb_undo_log_truncate is enabled. "
+VARS,,innodb_mirrored_log_groups,5.5;5.6;10.1;10.2,0,,,
+VARS,,innodb_monitor_disable,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_monitor_enable,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_monitor_reset,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_monitor_reset_all,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_mtflush_threads,10.1;10.2,8,,,
+VARS,,innodb_numa_interleave,5.6;5.7;8.0,OFF,,,
+VARS,,innodb_old_blocks_pct,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,37,,,
+VARS,,innodb_old_blocks_time,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1000,,,
+VARS,,innodb_online_alter_log_max_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,134217728,,,
+VARS,,innodb_open_files,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2500,,,
+VARS,,innodb_optimize_fulltext_only,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_page_cleaners,5.7;8.0;10.2;10.3;10.4;10.5,4,,,
+VARS,,innodb_page_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16384,,,
+VARS,,innodb_parallel_dblwr_encrypt,5.7,OFF,,,
+VARS,,innodb_parallel_doublewrite_path,5.7,xb_doublewrite,,,
+VARS,,innodb_parallel_read_threads,8,4,,,
+VARS,,innodb_prefix_index_cluster_optimization,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_print_all_deadlocks,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_print_ddl_logs,8,OFF,,,
+VARS,,innodb_print_lock_wait_timeout_info,5.7;10.1,OFF,,,
+VARS,,innodb_purge_batch_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,300,,,
+VARS,,innodb_purge_rseg_truncate_frequency,5.7;8.0;10.2;10.3;10.4;10.5;10.6,128,,,
+VARS,,innodb_purge_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,,
+VARS,,innodb_random_read_ahead,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_read_ahead_threshold,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,56,,,
+VARS,,innodb_read_io_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,,
+VARS,,innodb_read_only,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_read_only_compressed,10.6,ON,,,
+VARS,,innodb_records_in_range,5.7,0,,,
+VARS,,innodb_redo_log_archive_dirs,8,,,,
+VARS,,innodb_redo_log_encrypt,5.7;8.0,OFF,,,
+VARS,,innodb_replication_delay,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,0,,,
+VARS,,innodb_rollback_on_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_rollback_segments,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4,128,,,
+VARS,,innodb_safe_truncate,10.2,ON,,,
+VARS,,innodb_sched_priority_cleaner,10.1;10.2,0,,,
+VARS,,innodb_scrub_log,5.7;10.1;10.2;10.3;10.4;10.5,OFF,,ONOFF,Enable redo log scrubbing to overwrite deleted data
+VARS,,innodb_scrub_log_speed,5.7;10.1;10.2;10.3;10.4;10.5,256,,bytes/sec,Redo log scrubbing speed
+VARS,,innodb_segment_reserve_factor,8,12,,,
+VARS,,innodb_show_locks_held,5.7;10.1;10.2,0,,,
+VARS,,innodb_show_verbose_locks,5.7;10.1;10.2,0,,,
+VARS,,innodb_simulate_comp_failures,10.1,0,,,
+VARS,,innodb_sort_buffer_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1048576,,,
+VARS,,innodb_spin_wait_delay,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,,
+VARS,,innodb_spin_wait_pause_multiplier,8,50,,,
+VARS,,innodb_stats_auto_recalc,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_stats_include_delete_marked,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_stats_method,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,nulls_equal,,,
+VARS,,innodb_stats_modified_counter,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,innodb_stats_on_metadata,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_stats_persistent,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_stats_persistent_sample_pages,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20,,,
+VARS,,innodb_stats_sample_pages,5.5;5.6;5.7;10.1;10.2;10.3;10.4,8,,,
+VARS,,innodb_stats_traditional,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_stats_transient_sample_pages,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,8,,,
+VARS,,innodb_status_output,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_status_output_locks,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_strict_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_support_xa,5.5;5.6;5.7;10.1;10.2,ON,,,
+VARS,,innodb_sync_array_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,1,,,
+VARS,,innodb_sync_spin_loops,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,30,,,
+VARS,,innodb_sys_tablespace_encrypt,5.7,OFF,,,
+VARS,,innodb_table_locks,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_temp_data_file_path,5.7;8.0;10.2;10.3;10.4;10.5;10.6,ibtmp1:12M:autoextend,,,
+VARS,,innodb_temp_tablespace_encrypt,5.7,OFF,,,
+VARS,,innodb_temp_tablespaces_dir,8,./#innodb_temp/,,path,
+VARS,,innodb_thread_concurrency,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,0,,,
+VARS,,innodb_thread_sleep_delay,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5,10000,,,
+VARS,,innodb_tmpdir,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,innodb_track_changed_pages,5.7;10.1;10.2,OFF,,,
+VARS,,innodb_track_redo_log_now,10.2,OFF,,,
+VARS,,innodb_undo_directory,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,./,,,
+VARS,,innodb_undo_log_encrypt,5.7;8.0,OFF,,,
+VARS,,innodb_undo_log_truncate,5.7;8.0;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,innodb_undo_logs,5.6;5.7;10.1;10.2;10.3;10.4;10.5,128,,,
+VARS,,innodb_undo_tablespaces,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,number,Undo tablespaces to use
+VARS,,innodb_use_atomic_writes,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,innodb_use_fallocate,10.1;10.2,OFF,,,
+VARS,,innodb_use_fdatasync,8,OFF,,ONOFF,Use fdatasync() instead of sync() for performance
+VARS,,innodb_use_global_flush_log_at_trx_commit,5.7;10.1;10.2,OFF,,,
+VARS,,innodb_use_mtflush,10.1;10.2,OFF,,,
+VARS,,innodb_use_native_aio,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,Use the Linux asynchronous I/O subsystem. 
+VARS,,innodb_use_stacktrace,10.1;10.2,OFF,,,
+VARS,,innodb_use_sys_malloc,5.5;5.6;10.1,ON,,,
+VARS,,innodb_use_trim,10.1;10.2,ON,,,
+VARS,,innodb_validate_tablespace_paths,8,ON,,,
+VARS,,innodb_version,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,5.7.35,,,
+VARS,,innodb_write_io_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4,,,
+VARS,,insert_id,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,interactive_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,,
+VARS,,internal_tmp_disk_storage_engine,5.7,InnoDB,,,
+VARS,,internal_tmp_mem_storage_engine,8,TempTable,,,
+VARS,,join_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,8388608,,bytes,"The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans."
+VARS,,join_buffer_space_limit,10.1;10.2;10.3;10.4;10.5;10.6,2097152,,,
+VARS,,join_cache_level,10.1;10.2;10.3;10.4;10.5;10.6,2,,,
+VARS,,keep_files_on_create,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,"If a MyISAM table is created with no DATA DIRECTORY option, the .MYD file is created in the database directory. By default, if MyISAM finds an existing .MYD file in this case, it overwrites it. The same applies to .MYI files for tables created with no INDEX DIRECTORY option. To suppress this behavior, set the keep_files_on_create variable to ON (1), in which case MyISAM does not overwrite existing files and returns an error instead. The default value is OFF (0)"
+VARS,,key_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,134217728,,bytes,Size of MyISAM key cache.
+VARS,,key_cache_age_threshold,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,300,,number,This value controls the demotion of buffers from the hot sublist of a key cache to the warm sublist. Lower values cause demotion to happen more quickly. The minimum value is 100. 
+VARS,,key_cache_block_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,bytes,The size in bytes of blocks in the key cache. T
+VARS,,key_cache_division_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100,,percent,The division point between the hot and warm sublists of the key cache buffer list. The value is the percentage of the buffer list to use for the warm sublist.
+VARS,,key_cache_file_hash_size,10.1;10.2;10.3;10.4;10.5;10.6,512,,,
+VARS,,key_cache_segments,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,keyring_operations,5.7;8.0,ON,,,
+VARS,,kill_idle_transaction,5.7,0,,,
+VARS,,large_files_support,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,Whether mysqld was compiled with options for large file support
+VARS,,large_page_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,bytes,"If large page support is enabled, this shows the size of memory pages. Large memory pages are supported only on Linux; on other platforms, the value of this variable is always 0"
+VARS,,large_pages,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether large page support is enabled
+VARS,,last_gtid,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,last_insert_id,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,identity,number,The value to be returned from LAST_INSERT_ID(). This is stored in the binary log when you use LAST_INSERT_ID() in a statement that updates a table. 
+VARS,,lc_messages,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,en_US,,locale,
+VARS,,lc_messages_dir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,pathname,
+VARS,,lc_time_names,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,en_US,,locale,This variable specifies the locale that controls the language used to display day and month names and abbreviations
+VARS,,license,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,GPL,,text,The type of license the server has
+VARS,,local_infile,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,This variable controls server-side LOCAL capability for LOAD DATA statements. 
+VARS,,lock_wait_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,86400,,seconds,The timeout in seconds for attempts to acquire metadata locks.
+VARS,,locked_in_memory,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,Whether mysqld was locked in memory with --memlock.
+VARS,,log,5.5,OFF,,,
+VARS,setting,log_bin,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,filename,Enables binary logging
+VARS,,log_bin_basename,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,path,
+VARS,,log_bin_compress,10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,
+VARS,,log_bin_compress_min_len,10.2;10.3;10.4;10.5;10.6,256,,,
+VARS,,log_bin_index,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,filename,
+VARS,,log_bin_trust_function_creators,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,log_bin_use_v1_row_events,5.6;5.7;8.0,OFF,,,
+VARS,,log_builtin_as_identified_by_password,5.7,OFF,,,
+VARS,,log_disabled_statements,10.3;10.4;10.5;10.6,sp,,,
+VARS,,log_error,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,pathname,Error log output destination
+VARS,,log_error_services,8,log_filter_internal; log_sink_internal,,,
+VARS,,log_error_suppression_list,8,,,,
+VARS,,log_error_verbosity,5.7;8.0,3,,number,"1-Error messages; 2-Error and warning messages; 3-Error, warning, and informational messages"
+VARS,,log_output,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,FILE,,text,"Combinations of TABLE, FILE, NONE"
+VARS,,log_queries_not_using_indexes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,ONOFF,"If you enable this variable with the slow query log enabled, queries that are expected to retrieve all rows are logged.  This option does not necessarily mean that no index is used. For example, a query that uses a full index scan uses an index but would be logged because the index would not limit the number of rows."
+VARS,,log_raw,8,OFF,,,
+VARS,,log_replica_updates,8,ON,,,
+VARS,,log_slave_updates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,log_slow_admin_statements,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,ONOFF,Include slow administrative statements in the slow query log.
+VARS,,log_slow_disabled_statements,10.3;10.4;10.5;10.6,sp,,,
+VARS,,log_slow_extra,8,OFF,,,
+VARS,,log_slow_filter,5.7;10.1;10.2;10.3;10.4;10.5;10.6,"admin,filesort,filesort_on_disk,full_join,full_scan,query_cache,query_cache_miss,tmp_table,tmp_table_on_disk",,,
+VARS,,log_slow_queries,5.5,OFF,,,
+VARS,,log_slow_rate_limit,5.7;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,log_slow_rate_type,5.7,session,,,
+VARS,,log_slow_replica_statements,8,OFF,,,
+VARS,,log_slow_slave_statements,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,log_slow_sp_statements,5.7,ON,,,
+VARS,,log_slow_verbosity,5.7;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,log_statements_unsafe_for_binlog,5.7;8.0,ON,,,
+VARS,,log_syslog,5.7,OFF,,ONOFF,Whether to write error log output to the system log.
+VARS,,log_syslog_facility,5.7,daemon,,,
+VARS,,log_syslog_include_pid,5.7,ON,,,
+VARS,,log_syslog_tag,5.7,,,,
+VARS,,log_tc_size,10.1;10.2;10.3;10.4;10.5;10.6,24576,,,
+VARS,,log_throttle_queries_not_using_indexes,5.6;5.7;8.0,0,log_queries_not_using_indexes,statements/minute,"For queries expected to retrieve all rows, Limit their number per minute that can be written to the slow query log. 0: no limit."
+VARS,,log_timestamps,5.7;8.0,UTC,,,
+VARS,,log_warnings,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,2,,,
+VARS,,long_query_time,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2,,seconds,"If a query takes longer than this many seconds, the server increments the Slow_queries status variable. If the slow query log is enabled, the query is logged to the slow query log file. This value is measured in real time, not CPU time"
+VARS,,low_priority_updates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,lower_case_file_system,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,lower_case_table_names,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,mandatory_roles,8,,,,
+VARS,,master_info_repository,5.6;5.7;8.0,FILE,,,
+VARS,,master_verify_checksum,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,max_allowed_packet,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,,
+VARS,,max_binlog_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,max_binlog_files,5.7,0,,,
+VARS,,max_binlog_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,,
+VARS,,max_binlog_stmt_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,max_connect_errors,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,max_connections,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2000,,,
+VARS,,max_delayed_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20,,,
+VARS,,max_digest_length,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,max_error_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,64,,,
+VARS,,max_execution_time,5.7;8.0,0,,,
+VARS,,max_heap_table_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,36700160,,,
+VARS,,max_insert_delayed_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,20,,,
+VARS,,max_join_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,max_length_for_sort_data,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,max_long_data_size,5.5;10.1;10.2;10.3;10.4,1073741824,,,
+VARS,,max_password_errors,10.4;10.5;10.6,4294967295,,,
+VARS,,max_points_in_geometry,5.7;8.0,65536,,,
+VARS,,max_prepared_stmt_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16382,,,
+VARS,,max_recursive_iterations,10.2;10.3;10.4;10.5;10.6,4294967295,,,
+VARS,,max_relay_log_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,,
+VARS,,max_rowid_filter_size,10.4;10.5;10.6,131072,,,
+VARS,,max_seeks_for_key,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4294967295,,,
+VARS,,max_session_mem_used,10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,max_slowlog_files,5.7,0,,,
+VARS,,max_slowlog_size,5.7,0,,,
+VARS,,max_sort_length,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,max_sp_recursion_depth,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,max_statement_time,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,max_tmp_tables,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,32,,,
+VARS,,max_user_connections,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,max_write_lock_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4294967295,,,
+VARS,,metadata_locks_cache_size,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,metadata_locks_hash_instances,5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,8,,,
+VARS,,min_examined_row_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,mrr_buffer_size,10.1;10.2;10.3;10.4;10.5;10.6,262144,,,
+VARS,,multi_range_count,5.5;5.6;5.7;10.1;10.2;10.3;10.4,256,,,
+VARS,,myisam_block_size,10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,myisam_data_pointer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,6,,,
+VARS,,myisam_max_sort_file_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,myisam_mmap_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,myisam_recover_options,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,"BACKUP,QUICK",,,
+VARS,,myisam_repair_threads,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,myisam_sort_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,134216704,,,
+VARS,,myisam_stats_method,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,NULLS_UNEQUAL,,,
+VARS,,myisam_use_mmap,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,mysql56_temporal_format,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,mysql_native_password_proxy_users,5.7;8.0,OFF,,,
+VARS,,mysqlx_bind_address,8,*,,,
+VARS,,mysqlx_compression_algorithms,8,"DEFLATE_STREAM,LZ4_MESSAGE,ZSTD_STREAM",,,
+VARS,,mysqlx_connect_timeout,8,30,,,
+VARS,,mysqlx_deflate_default_compression_level,8,3,,,
+VARS,,mysqlx_deflate_max_client_compression_level,8,5,,,
+VARS,,mysqlx_document_id_unique_prefix,8,0,,,
+VARS,,mysqlx_enable_hello_notice,8,ON,,,
+VARS,,mysqlx_idle_worker_thread_timeout,8,60,,,
+VARS,,mysqlx_interactive_timeout,8,28800,,,
+VARS,,mysqlx_lz4_default_compression_level,8,2,,,
+VARS,,mysqlx_lz4_max_client_compression_level,8,8,,,
+VARS,,mysqlx_max_allowed_packet,8,67108864,,,
+VARS,,mysqlx_max_connections,8,100,,,
+VARS,,mysqlx_min_worker_threads,8,2,,,
+VARS,,mysqlx_port,8,33060,,,
+VARS,,mysqlx_port_open_timeout,8,0,,,
+VARS,,mysqlx_read_timeout,8,30,,,
+VARS,,mysqlx_socket,8,/var/run/mysqld/mysqlx.sock,,,
+VARS,,mysqlx_ssl_ca,8,,,,
+VARS,,mysqlx_ssl_capath,8,,,,
+VARS,,mysqlx_ssl_cert,8,,,,
+VARS,,mysqlx_ssl_cipher,8,,,,
+VARS,,mysqlx_ssl_crl,8,,,,
+VARS,,mysqlx_ssl_crlpath,8,,,,
+VARS,,mysqlx_ssl_key,8,,,,
+VARS,,mysqlx_wait_timeout,8,28800,,,
+VARS,,mysqlx_write_timeout,8,60,,,
+VARS,,mysqlx_zstd_default_compression_level,8,3,,,
+VARS,,mysqlx_zstd_max_client_compression_level,8,11,,,
+VARS,,net_buffer_length,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16384,,,
+VARS,,net_read_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,30,,,
+VARS,,net_retry_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,,
+VARS,,net_write_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,60,,,
+VARS,,new,5.5;5.6;5.7;8.0,OFF,,,
+VARS,,ngram_token_size,5.7;8.0,2,,,
+VARS,,offline_mode,5.7;8.0,OFF,,,
+VARS,,old,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,old_alter_table,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,old_mode,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,old_passwords,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,open_files_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,80000,,,
+VARS,,optimizer_max_sel_arg_weight,10.5;10.6,32000,,,
+VARS,,optimizer_prune_level,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,optimizer_search_depth,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,62,,,
+VARS,,optimizer_selectivity_sampling_limit,10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,optimizer_switch,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,"index_merge=on,index_merge_union=on,index_merge_sort_union=on,index_merge_intersection=on,index_merge_sort_intersection=off,engine_condition_pushdown=off,index_condition_pushdown=on,derived_merge=on,derived_with_keys=on,firstmatch=on,loosescan=on,materialization=on,in_to_exists=on,semijoin=on,partial_match_rowid_merge=on,partial_match_table_scan=on,subquery_cache=on,mrr=off,mrr_cost_based=off,mrr_sort_keys=off,outer_join_with_cache=on,semijoin_with_cache=on,join_cache_incremental=on,join_cache_hashed=on,join_cache_bka=on,optimize_join_buffer_size=off,table_elimination=on,extended_keys=on,exists_to_in=on,orderby_uses_equalities=on,condition_pushdown_for_derived=on",,,
+VARS,,optimizer_trace,5.6;5.7;8.0;10.4;10.5;10.6,"enabled=off,one_line=off",,,
+VARS,,optimizer_trace_features,5.6;5.7;8.0,"greedy_search=on,range_optimizer=on,dynamic_range=on,repeated_subselect=on",,,
+VARS,,optimizer_trace_limit,5.6;5.7;8.0,1,,,
+VARS,,optimizer_trace_max_mem_size,5.6;5.7;8.0;10.4;10.5;10.6,16384,,,
+VARS,,optimizer_trace_offset,5.6;5.7;8.0,-1,,,
+VARS,,optimizer_use_condition_selectivity,10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,original_commit_timestamp,8,3.6E+016,,,
+VARS,,original_server_version,8,999999,,,
+VARS,,parser_max_mem_size,5.7;8.0,9.22E+018,,,
+VARS,,partial_revokes,8,OFF,,,
+VARS,,password_history,8,0,,,
+VARS,,password_require_current,8,OFF,,,
+VARS,,password_reuse_interval,8,0,,,
+VARS,,performance_schema,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,performance_schema_accounts_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_digests_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_error_size,8,4946,,,
+VARS,,performance_schema_events_stages_history_long_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_events_stages_history_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_events_statements_history_long_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_events_statements_history_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_events_transactions_history_long_size,5.7;8.0;10.5;10.6,10000,,,
+VARS,,performance_schema_events_transactions_history_size,5.7;8.0;10.5;10.6,10,,,
+VARS,,performance_schema_events_waits_history_long_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_events_waits_history_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_hosts_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_cond_classes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,80,,,
+VARS,,performance_schema_max_cond_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_digest_length,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,performance_schema_max_digest_sample_age,8,60,,,
+VARS,,performance_schema_max_file_classes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,,
+VARS,,performance_schema_max_file_handles,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32768,,,
+VARS,,performance_schema_max_file_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_index_stat,5.7;8.0;10.5;10.6,-1,,,
+VARS,,performance_schema_max_memory_classes,5.7;8.0;10.5;10.6,400,,,
+VARS,,performance_schema_max_metadata_locks,5.7;8.0;10.5;10.6,-1,,,
+VARS,,performance_schema_max_mutex_classes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,200,,,
+VARS,,performance_schema_max_mutex_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_prepared_statements_instances,5.7;8.0;10.5;10.6,-1,,,
+VARS,,performance_schema_max_program_instances,5.7;8.0;10.5;10.6,-1,,,
+VARS,,performance_schema_max_rwlock_classes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,40,,,
+VARS,,performance_schema_max_rwlock_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_socket_classes,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,,
+VARS,,performance_schema_max_socket_instances,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_sql_text_length,5.7;8.0;10.5;10.6,1024,,,
+VARS,,performance_schema_max_stage_classes,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,150,,,
+VARS,,performance_schema_max_statement_classes,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,194,,,
+VARS,,performance_schema_max_statement_stack,5.7;8.0;10.5;10.6,10,,,
+VARS,,performance_schema_max_table_handles,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_table_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_max_table_lock_stat,5.7;8.0;10.5;10.6,-1,,,
+VARS,,performance_schema_max_thread_classes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,,
+VARS,,performance_schema_max_thread_instances,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_session_connect_attrs_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,performance_schema_setup_actors_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,performance_schema_setup_objects_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,100,,,
+VARS,,performance_schema_show_processlist,8,OFF,,,
+VARS,,performance_schema_users_size,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,-1,,,
+VARS,,persist_only_admin_x509_subject,8,,,,
+VARS,,persisted_globals_load,8,ON,,,
+VARS,,pid_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/var/lib/mysql/cp17.pid,,,
+VARS,,plugin_dir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/usr/lib64/mysql/plugin/,,,
+VARS,,plugin_maturity,10.1;10.2;10.3;10.4;10.5;10.6,unknown,,,
+VARS,,port,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3306,,,
+VARS,,preload_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,32768,,,
+VARS,,print_identified_with_as_hex,8,OFF,,,
+VARS,,profiling,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,profiling_history_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,15,,,
+VARS,,progress_report_time,10.1;10.2;10.3;10.4;10.5;10.6,5,,,
+VARS,,protocol_compression_algorithms,8,"zlib,zstd,uncompressed",,,
+VARS,,protocol_version,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,,
+VARS,,proxy_protocol_networks,5.7;10.3;10.4;10.5;10.6,,,,
+VARS,,proxy_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,pseudo_replica_mode,8,OFF,,,
+VARS,,pseudo_server_id,5.7,0,,,
+VARS,,pseudo_slave_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,pseudo_thread_id,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16954025,,,
+VARS,,query_alloc_block_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,16384,,,
+VARS,,query_cache_limit,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,268435456,,,
+VARS,,query_cache_min_res_unit,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,4096,,,
+VARS,,query_cache_size,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,268435456,,,
+VARS,,query_cache_strip_comments,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,query_cache_type,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,query_cache_wlock_invalidate,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,query_prealloc_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,24576,,,
+VARS,,rand_seed1,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,626527131,,,
+VARS,,rand_seed2,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,674336250,,,
+VARS,,range_alloc_block_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4096,,,
+VARS,,range_optimizer_max_mem_size,5.7;8.0,8388608,,,
+VARS,,rbr_exec_mode,5.7;8.0,STRICT,,,
+VARS,,read_binlog_speed_limit,10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,read_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,131072,,,
+VARS,,read_only,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,read_rnd_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,262144,,,
+VARS,,regexp_stack_limit,8,8000000,,,
+VARS,,regexp_time_limit,8,32,,,
+VARS,,relay_log,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,relay_log_basename,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,relay_log_index,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,relay_log_info_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,relay-log.info,,,
+VARS,,relay_log_info_repository,5.6;5.7;8.0,FILE,,,
+VARS,,relay_log_purge,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,relay_log_recovery,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,relay_log_space_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,replica_allow_batching,8,OFF,,,
+VARS,,replica_checkpoint_group,8,512,,,
+VARS,,replica_checkpoint_period,8,300,,,
+VARS,,replica_compressed_protocol,8,OFF,,,
+VARS,,replica_exec_mode,8,STRICT,,,
+VARS,,replica_load_tmpdir,8,/tmp,,,
+VARS,,replica_max_allowed_packet,8,1073741824,,,
+VARS,,replica_net_timeout,8,60,,,
+VARS,,replica_parallel_type,8,DATABASE,,,
+VARS,,replica_parallel_workers,8,0,,,
+VARS,,replica_pending_jobs_size_max,8,134217728,,,
+VARS,,replica_preserve_commit_order,8,OFF,,,
+VARS,,replica_skip_errors,8,OFF,,,
+VARS,,replica_sql_verify_checksum,8,ON,,,
+VARS,,replica_transaction_retries,8,10,,,
+VARS,,replica_type_conversions,8,,,,
+VARS,,replicate_annotate_row_events,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,replicate_do_db,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replicate_do_table,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replicate_events_marked_for_skip,10.1;10.2;10.3;10.4;10.5;10.6,REPLICATE,,,
+VARS,,replicate_ignore_db,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replicate_ignore_table,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replicate_wild_do_table,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replicate_wild_ignore_table,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,replication_optimize_for_static_plugin_config,5.7;8.0,OFF,,,
+VARS,,replication_sender_observe_commit_only,5.7;8.0,OFF,,,
+VARS,,report_host,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,report_password,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,report_port,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3306,,,
+VARS,,report_user,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,require_row_format,8,OFF,,,
+VARS,,require_secure_transport,5.7;8.0;10.5;10.6,OFF,,,
+VARS,,resultset_metadata,8,FULL,,,
+VARS,,rowid_merge_buff_size,10.1;10.2;10.3;10.4;10.5;10.6,8388608,,,
+VARS,,rpl_read_size,8,8192,,,
+VARS,,rpl_recovery_rank,5.5,0,,,
+VARS,,rpl_semi_sync_master_enabled,10.3;10.4;10.5;10.6,OFF,,,
+VARS,,rpl_semi_sync_master_timeout,10.3;10.4;10.5;10.6,10000,,,
+VARS,,rpl_semi_sync_master_trace_level,10.3;10.4;10.5;10.6,32,,,
+VARS,,rpl_semi_sync_master_wait_no_slave,10.3;10.4;10.5;10.6,ON,,,
+VARS,,rpl_semi_sync_master_wait_point,10.3;10.4;10.5;10.6,AFTER_COMMIT,,,
+VARS,,rpl_semi_sync_slave_delay_master,10.3;10.4;10.5;10.6,OFF,,,
+VARS,,rpl_semi_sync_slave_enabled,10.3;10.4;10.5;10.6,OFF,,,
+VARS,,rpl_semi_sync_slave_kill_conn_timeout,10.3;10.4;10.5;10.6,5,,,
+VARS,,rpl_semi_sync_slave_trace_level,10.3;10.4;10.5;10.6,32,,,
+VARS,,rpl_stop_replica_timeout,8,31536000,,,
+VARS,,rpl_stop_slave_timeout,5.6;5.7;8.0,31536000,,,
+VARS,,schema_definition_cache,8,256,,,
+VARS,,secondary_engine_cost_threshold,8,100000,,,
+VARS,,secure_auth,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,secure_file_priv,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,secure_timestamp,10.3;10.4;10.5;10.6,NO,,,
+VARS,,select_into_buffer_size,8,131072,,,
+VARS,,select_into_disk_sync,8,OFF,,,
+VARS,,select_into_disk_sync_delay,8,0,,,
+VARS,,server_id,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,server_id_bits,5.6;5.7;8.0,32,,,
+VARS,,server_uuid,5.6;5.7;8.0,c5ff5323-7b6f-11eb-bc2b-00163ea32369,,,
+VARS,,session_track_gtids,5.7;8.0,OFF,,,
+VARS,,session_track_schema,5.7;8.0;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,session_track_state_change,5.7;8.0;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,session_track_system_variables,5.7;8.0;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,session_track_transaction_info,5.7;8.0;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,sha256_password_auto_generate_rsa_keys,5.7;8.0,ON,,,
+VARS,,sha256_password_private_key_path,5.6;5.7;8.0,private_key.pem,,,
+VARS,,sha256_password_proxy_users,5.7;8.0,OFF,,,
+VARS,,sha256_password_public_key_path,5.6;5.7;8.0,public_key.pem,,,
+VARS,,show_compatibility_56,5.7,ON,,,
+VARS,,show_create_table_skip_secondary_engine,8,OFF,,,
+VARS,,show_create_table_verbosity,5.7;8.0,OFF,,,
+VARS,,show_old_temporals,5.6;5.7;8.0,OFF,,,
+VARS,,simplified_binlog_gtid_recovery,5.6,OFF,,,
+VARS,,skip_external_locking,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,skip_name_resolve,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,skip_networking,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,skip_parallel_replication,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,skip_replica_start,8,OFF,,,
+VARS,,skip_replication,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,skip_show_database,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,skip_slave_start,8,OFF,,,
+VARS,,slave_allow_batching,5.6;5.7;8.0,OFF,,,
+VARS,,slave_checkpoint_group,5.6;5.7;8.0,512,,,
+VARS,,slave_checkpoint_period,5.6;5.7;8.0,300,,,
+VARS,,slave_compressed_protocol,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,slave_ddl_exec_mode,10.1;10.2;10.3;10.4;10.5;10.6,IDEMPOTENT,,,
+VARS,,slave_domain_parallel_threads,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,slave_exec_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,STRICT,,,
+VARS,,slave_load_tmpdir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/tmp,,,
+VARS,,slave_max_allowed_packet,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1073741824,,,
+VARS,,slave_net_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,60,,,
+VARS,,slave_parallel_max_queued,10.1;10.2;10.3;10.4;10.5;10.6,131072,,,
+VARS,,slave_parallel_mode,10.1;10.2;10.3;10.4;10.5;10.6,conservative,,,
+VARS,,slave_parallel_threads,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,slave_parallel_type,5.7;8.0,DATABASE,,,
+VARS,,slave_parallel_workers,5.6;5.7;8.0;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,slave_pending_jobs_size_max,5.6;5.7;8.0,16777216,,,
+VARS,,slave_preserve_commit_order,5.7;8.0,OFF,,,
+VARS,,slave_rows_search_algorithms,5.6;5.7;8.0,"TABLE_SCAN,INDEX_SCAN",,,
+VARS,,slave_run_triggers_for_rbr,10.1;10.2;10.3;10.4;10.5;10.6,NO,,,
+VARS,,slave_skip_errors,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,slave_sql_verify_checksum,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,slave_transaction_retries,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10,,,
+VARS,,slave_transaction_retry_errors,10.3;10.4;10.5;10.6,12131205,,,
+VARS,,slave_transaction_retry_interval,10.3;10.4;10.5;10.6,0,,,
+VARS,,slave_type_conversions,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,slow_launch_time,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2,,,
+VARS,,slow_query_log,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,slow_query_log_always_write_time,5.7,10,,,
+VARS,,slow_query_log_file,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,cp17-slow.log,,,
+VARS,,slow_query_log_use_global_control,5.7,,,,
+VARS,,socket,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/var/lib/mysql/mysql.sock,,,
+VARS,,sort_buffer_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2097152,,,
+VARS,,source_verify_checksum,8,OFF,,,
+VARS,,sql_auto_is_null,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,sql_big_selects,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,sql_big_tables,5.5,OFF,,,
+VARS,,sql_buffer_result,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,sql_if_exists,10.5;10.6,OFF,,,
+VARS,,sql_log_bin,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,sql_log_off,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,sql_low_priority_updates,5.5,OFF,,,
+VARS,,sql_max_join_size,5.5,9.22E+018,,,
+VARS,,sql_mode,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,"ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION",,,
+VARS,,sql_notes,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,sql_quote_show_create,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,sql_replica_skip_counter,8,0,,,
+VARS,,sql_require_primary_key,8,OFF,,,
+VARS,,sql_safe_updates,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,sql_select_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,sql_slave_skip_counter,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,sql_warnings,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,ssl_ca,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_capath,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_cert,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_cipher,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_crl,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_crlpath,5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,ssl_fips_mode,8,OFF,,,
+VARS,,ssl_key,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,standard_compliant_cte,10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,storage_engine,5.5;5.6;10.1;10.2;10.3;10.4;10.5;10.6,MyISAM,,,
+VARS,,stored_program_cache,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,256,,,
+VARS,,stored_program_definition_cache,8,256,,,
+VARS,,strict_password_validation,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,super_read_only,5.7;8.0,OFF,,,
+VARS,,sync_binlog,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,sync_frm,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,sync_master_info,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10000,,,
+VARS,,sync_relay_log,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10000,,,
+VARS,,sync_relay_log_info,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10000,,,
+VARS,,sync_source_info,8,10000,,,
+VARS,,system_time_zone,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,3,,,
+VARS,,system_versioning_alter_history,10.3;10.4;10.5;10.6,ERROR,,,
+VARS,,system_versioning_asof,10.3;10.4;10.5;10.6,DEFAULT,,,
+VARS,,table_definition_cache,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1024,,,
+VARS,,table_encryption_privilege_check,8,OFF,,,
+VARS,,table_open_cache,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,2500,,,
+VARS,,table_open_cache_instances,5.6;5.7;8.0;10.2;10.3;10.4;10.5;10.6,8,,,
+VARS,,tablespace_definition_cache,8,256,,,
+VARS,,tcp_keepalive_interval,10.3;10.4;10.5;10.6,0,,,
+VARS,,tcp_keepalive_probes,10.3;10.4;10.5;10.6,0,,,
+VARS,,tcp_keepalive_time,10.3;10.4;10.5;10.6,0,,,
+VARS,,tcp_nodelay,10.4;10.5;10.6,ON,,,
+VARS,,temptable_max_mmap,8,1073741824,,,
+VARS,,temptable_max_ram,8,1073741824,,,
+VARS,,temptable_use_mmap,8,ON,,,
+VARS,,terminology_use_previous,8,NONE,,,
+VARS,,thread_cache_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,256,,,
+VARS,,thread_concurrency,5.5;5.6;10.1;10.2;10.3;10.4,10,,,
+VARS,,thread_handling,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,one-thread-per-connection,,,
+VARS,,thread_pool_dedicated_listener,10.5;10.6,OFF,,,
+VARS,,thread_pool_exact_stats,10.5;10.6,OFF,,,
+VARS,,thread_pool_high_prio_mode,5.7,transactions,,,
+VARS,,thread_pool_high_prio_tickets,5.7,4294967295,,,
+VARS,,thread_pool_idle_timeout,5.7;10.1;10.2;10.3;10.4;10.5;10.6,60,,,
+VARS,,thread_pool_max_threads,5.7;10.1;10.2;10.3;10.4;10.5;10.6,65536,,,
+VARS,,thread_pool_oversubscribe,5.7;10.1;10.2;10.3;10.4;10.5;10.6,3,,,
+VARS,,thread_pool_prio_kickup_timer,10.2;10.3;10.4;10.5;10.6,1000,,,
+VARS,,thread_pool_priority,10.2;10.3;10.4;10.5;10.6,auto,,,
+VARS,,thread_pool_size,5.7;10.1;10.2;10.3;10.4;10.5;10.6,16,,,
+VARS,,thread_pool_stall_limit,5.7;10.1;10.2;10.3;10.4;10.5;10.6,500,,,
+VARS,,thread_stack,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,299008,,,
+VARS,,thread_statistics,5.7,OFF,,,
+VARS,,time_format,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,%H:%i:%s,,,
+VARS,,time_zone,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,SYSTEM,,,
+VARS,,timed_mutexes,5.5;5.6;10.1;10.2;10.3;10.4,OFF,,,
+VARS,,timestamp,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,1632841429,,,
+VARS,,tls_ciphersuites,8,,,,
+VARS,,tls_version,5.7;8.0;10.4;10.5;10.6,"TLSv1,TLSv1.1,TLSv1.2",,,
+VARS,,tmp_disk_table_size,10.2;10.3;10.4;10.5;10.6,9.22E+018,,,
+VARS,,tmp_memory_table_size,10.2;10.3;10.4;10.5;10.6,36700160,,,
+VARS,,tmp_table_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,36700160,,,
+VARS,,tmpdir,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,/tmp,,,
+VARS,,transaction_alloc_block_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,8192,,,
+VARS,,transaction_allow_batching,5.6;5.7;8.0,OFF,,,
+VARS,,transaction_isolation,5.7;8.0,REPEATABLE-READ,,,
+VARS,,transaction_prealloc_size,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,4096,,,
+VARS,,transaction_read_only,5.7;8.0,OFF,,,
+VARS,,transaction_write_set_extraction,5.7;8.0,OFF,,,
+VARS,,tx_isolation,5.5;5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,REPEATABLE-READ,,,
+VARS,,tx_read_only,5.6;5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,unique_checks,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,updatable_views_with_limit,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,YES,,,
+VARS,,use_secondary_engine,8,ON,,,
+VARS,,use_stat_tables,10.1;10.2;10.3;10.4;10.5;10.6,NEVER,,,
+VARS,,userstat,5.7;10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,version,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,10.2.40-MariaDB-cll-lve,,,
+VARS,,version_comment,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,MariaDB Server,,,
+VARS,,version_compile_machine,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,x86_64,,,
+VARS,,version_compile_os,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,Linux,,,
+VARS,,version_compile_zlib,8,1.2.11,,,
+VARS,,version_malloc_library,10.1;10.2;10.3;10.4;10.5;10.6,jemalloc 3.6.0-0-g46c0af68bd248b04df75e4f92d5fb804c3d75340,,,
+VARS,,version_source_revision,10.3;10.4;10.5;10.6,7f264997dd21c5126350a9a5f0cc0960afdd1229,,,
+VARS,,version_ssl_library,10.1;10.2;10.3;10.4;10.5;10.6,OpenSSL 1.0.2k-fips  26 Jan 2017,,,
+VARS,,version_suffix,5.7,#NAME?,,,
+VARS,,wait_timeout,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,50,,,
+VARS,,warning_count,5.5;5.6;5.7;8.0;10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,windowing_use_high_precision,8,ON,,,
+VARS,,wsrep_auto_increment_control,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,wsrep_causal_reads,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_certification_rules,10.1;10.2;10.3;10.4;10.5;10.6,strict,,,
+VARS,,wsrep_certify_nonpk,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,wsrep_cluster_address,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_cluster_name,10.1;10.2;10.3;10.4;10.5;10.6,my_wsrep_cluster,,,
+VARS,,wsrep_convert_lock_to_trx,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_data_home_dir,10.1;10.2;10.3;10.4;10.5;10.6,/var/lib/mysql/,,,
+VARS,,wsrep_dbug_option,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_debug,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_desync,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_dirty_reads,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_drupal_282555_workaround,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_forced_binlog_format,10.1;10.2;10.3;10.4;10.5;10.6,NONE,,,
+VARS,,wsrep_gtid_domain_id,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,wsrep_gtid_mode,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_gtid_seq_no,10.5;10.6,0,,,
+VARS,,wsrep_ignore_apply_errors,10.4;10.5;10.6,7,,,
+VARS,,wsrep_load_data_splitting,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,wsrep_log_conflicts,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_max_ws_rows,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,wsrep_max_ws_size,10.1;10.2;10.3;10.4;10.5;10.6,2147483647,,,
+VARS,,wsrep_mode,10.6,,,,
+VARS,,wsrep_mysql_replication_bundle,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,wsrep_node_address,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_node_incoming_address,10.1;10.2;10.3;10.4;10.5;10.6,AUTO,,,
+VARS,,wsrep_node_name,10.1;10.2;10.3;10.4;10.5;10.6,cp17.servername.co,,,
+VARS,,wsrep_notify_cmd,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_on,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_osu_method,10.1;10.2;10.3;10.4;10.5;10.6,TOI,,,
+VARS,,wsrep_patch_version,10.1;10.2;10.3;10.4;10.5;10.6,wsrep_25.24,,,
+VARS,,wsrep_provider,10.1;10.2;10.3;10.4;10.5;10.6,none,,,
+VARS,,wsrep_provider_options,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_recover,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_reject_queries,10.1;10.2;10.3;10.4;10.5;10.6,NONE,,,
+VARS,,wsrep_replicate_myisam,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_restart_slave,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_retry_autocommit,10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,wsrep_slave_fk_checks,10.1;10.2;10.3;10.4;10.5;10.6,ON,,,
+VARS,,wsrep_slave_threads,10.1;10.2;10.3;10.4;10.5;10.6,1,,,
+VARS,,wsrep_slave_uk_checks,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_sr_store,10.4;10.5;10.6,table,,,
+VARS,,wsrep_sst_auth,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_sst_donor,10.1;10.2;10.3;10.4;10.5;10.6,,,,
+VARS,,wsrep_sst_donor_rejects_queries,10.1;10.2;10.3;10.4;10.5;10.6,OFF,,,
+VARS,,wsrep_sst_method,10.1;10.2;10.3;10.4;10.5;10.6,rsync,,,
+VARS,,wsrep_sst_receive_address,10.1;10.2;10.3;10.4;10.5;10.6,AUTO,,,
+VARS,,wsrep_start_position,10.1;10.2;10.3;10.4;10.5;10.6,00000000-0000-0000-0000-000000000000:-1,,,
+VARS,,wsrep_strict_ddl,10.5;10.6,OFF,,,
+VARS,,wsrep_sync_wait,10.1;10.2;10.3;10.4;10.5;10.6,0,,,
+VARS,,wsrep_trx_fragment_size,10.4;10.5;10.6,0,,,
+VARS,,wsrep_trx_fragment_unit,10.4;10.5;10.6,bytes,,,
